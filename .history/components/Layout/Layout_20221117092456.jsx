@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 
-export default function Layout({children}) {
+function Layout({children}) {
   return (
     <div id='Layout'>
       <Header />
@@ -9,3 +9,5 @@ export default function Layout({children}) {
     </div>
   );
 };
+
+export default Layout
