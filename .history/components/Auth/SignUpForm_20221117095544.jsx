@@ -14,6 +14,7 @@ export default function SignUpForm() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [username, setUsername] = useState('');
+    const [birth_date, setDob] = useState('');
 
     const [errMsg, setErrMsg] = useState('');
 
@@ -33,6 +34,9 @@ export default function SignUpForm() {
             setErrMsg('fields cannot be blank');
         }
 
+        if (birth_date == '') {
+            setErrMsg('fields cannot be blank');
+        }
 
 
         if (confirmPassword !== password) {
@@ -48,6 +52,7 @@ export default function SignUpForm() {
                         email: email,
                         password: password,
                         username: username,
+                        birth_date: birth_date,
                     }
                 ]);
             if (res.error) {
@@ -77,6 +82,11 @@ export default function SignUpForm() {
                 <input type='text' className={styles.input}
                 value={username} onChange={(e) => setUsername(e.target.value)} placeholder='username'/>
                 <label className={styles.label}>
+                    Date Of Birth:
+                </label>
+                <input type='date' className={styles.input}
+                    value={birth_date} onChange={(e) => setDob(e.target.value)} />
+                <label className={styles.label}>
                     Password:
                 </label>
                 <input type='password' className={styles.input}
@@ -86,12 +96,12 @@ export default function SignUpForm() {
                 </label>
                 <input type='password' className={styles.input}
                 value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder='******'/>
-                <button type='submit' className={styles.btn}>
-                    Create
-                </button>
                 <p className={styles.errMsg}>
                     {errMsg}
                 </p>
+                <button type='submit' className={styles.btn}>
+                    Create
+                </button>
             </form>
             
             <div className={styles.signInSection}>

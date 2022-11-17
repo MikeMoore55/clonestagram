@@ -1,0 +1,26 @@
+.container {
+    position: relative;
+    padding-top: 22%;
+}
+
+.signUpForm {
+    position: relative;
+    padding: 2% 5% 5% 5%;
+}
+
+.heading {
+    position: relative;
+    text-align: center;
+}
+
+.label {
+    position: relative;
+    text-align: center;
+    margin: 5% 5% 5% 5%;
+}
+
+.input {
+    position: relative;
+    margin: 5% 18% 5% 2%;
+    width: 80%;
+}

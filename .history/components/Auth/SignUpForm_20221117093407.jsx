@@ -14,6 +14,7 @@ export default function SignUpForm() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [username, setUsername] = useState('');
+    const [birth_date, setDob] = useState('');
 
     const [errMsg, setErrMsg] = useState('');
 
@@ -33,6 +34,9 @@ export default function SignUpForm() {
             setErrMsg('fields cannot be blank');
         }
 
+        if (birth_date == '') {
+            setErrMsg('fields cannot be blank');
+        }
 
 
         if (confirmPassword !== password) {
@@ -48,6 +52,7 @@ export default function SignUpForm() {
                         email: email,
                         password: password,
                         username: username,
+                        birth_date: birth_date,
                     }
                 ]);
             if (res.error) {
@@ -64,39 +69,45 @@ export default function SignUpForm() {
         <div className={styles.container}>
           <form onSubmit={createAccount} className={styles.signUpForm}>
                 <h2 className={styles.heading}>
-                  Sign Up
+                  Create Your Profile
                 </h2>
                 <label className={styles.label}>
                     Email:
                 </label>
                 <input type='text' className={styles.input}
-                    value={email} onChange={(e) => setEmail(e.target.value)} placeholder='example@email.com'/>
+                    value={email} onChange={(e) => setEmail(e.target.value)} />
+               
                 <label className={styles.label}>
                   Username:
                 </label>
                 <input type='text' className={styles.input}
-                value={username} onChange={(e) => setUsername(e.target.value)} placeholder='username'/>
+                value={username} onChange={(e) => setUsername(e.target.value)} />
+                <label className={styles.label}>
+                    Date Of Birth:
+                </label>
+                <input type='date' className={styles.input}
+                    value={birth_date} onChange={(e) => setDob(e.target.value)} />
                 <label className={styles.label}>
                     Password:
                 </label>
-                <input type='password' className={styles.input}
-                value={password} onChange={(e) => setPassword(e.target.value)} placeholder='******'/>
+                <input type='text' className={styles.input}
+                value={password} onChange={(e) => setPassword(e.target.value)} />
                 <label className={styles.label}>
                     Confirm Password:
                 </label>
-                <input type='password' className={styles.input}
-                value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder='******'/>
-                <button type='submit' className={styles.btn}>
-                    Create
-                </button>
+                <input type='text' className={styles.input}
+                value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                 <p className={styles.errMsg}>
                     {errMsg}
                 </p>
+                <button type='submit' className={styles.btn}>
+                    Create
+                </button>
             </form>
             
             <div className={styles.signInSection}>
                 Have an Account?
-                <span className={styles.signInText}>
+                <span>
                     <Link href={'/signin'}>
                         Sign In!
                     </Link>

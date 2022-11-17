@@ -86,12 +86,12 @@ export default function SignUpForm() {
                 </label>
                 <input type='password' className={styles.input}
                 value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder='******'/>
-                <button type='submit' className={styles.btn}>
-                    Create
-                </button>
                 <p className={styles.errMsg}>
                     {errMsg}
                 </p>
+                <button type='submit' className={styles.btn}>
+                    Create
+                </button>
             </form>
             
             <div className={styles.signInSection}>
