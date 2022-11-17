@@ -41,14 +41,13 @@ export default function SignUpForm() {
             }
             else {
                 setErrMsg('');
-                router.push("/signin"); // when successful take them to 'signin'
+                router.push("/signin");
             };
         };
     };
 
     return (
         <div className={styles.container}>
-
             <form onSubmit={createAccount} className={styles.signUpForm}>
                 
                 <h2 className={styles.heading}>

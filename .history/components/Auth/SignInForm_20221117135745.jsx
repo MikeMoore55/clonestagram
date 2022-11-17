@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useCookies } from 'react-cookie';
-import styles from '../../styles/SignIn.module.css';
+import styles from '../../styles/SignIn.module.css'
 
 export default function SignInForm({accounts}) {
 

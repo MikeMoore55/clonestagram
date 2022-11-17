@@ -7,15 +7,15 @@ export default function Home() {
   return (
     <div>
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       
       <Link href='/signup'>
         sign up
       </Link>
     </div>
-  );
-};
+  )
+}

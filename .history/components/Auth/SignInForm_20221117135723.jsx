@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useCookies } from 'react-cookie';
-import styles from '../../styles/SignIn.module.css';
+import styles from '../../styles/SignIn.module.css'
 
 export default function SignInForm({accounts}) {
 
@@ -100,12 +100,13 @@ export default function SignInForm({accounts}) {
             <div className={styles.signUpSection}>
                 Dont have an Account?
                 <span className={styles.signUpText}>
-                    <Link href='/signup'>
-                        Sign Up!
-                    </Link>        
+
+                <Link href='/signup'>
+                    Sign Up!
+                    </Link>
+                    
                 </span>  
             </div>
-
         </div>
     );
 };
