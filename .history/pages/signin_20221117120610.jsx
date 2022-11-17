@@ -1,12 +1,9 @@
 import React from 'react';
 import { SupaBaseDB } from '../utils/dbconnect';
-import SignInForm from '../components/Auth/SignInForm';
 
-export default function signin({accounts}) {
+export default function signin() {
   return (
-    <div>
-      <SignInForm accounts={accounts}/>
-    </div>
+    <div>signin</div>
   )
 }
 

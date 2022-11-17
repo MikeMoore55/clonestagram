@@ -5,7 +5,7 @@ import SignInForm from '../components/Auth/SignInForm';
 export default function signin({accounts}) {
   return (
     <div>
-      <SignInForm accounts={accounts}/>
+      <SignInForm accounts={accounts}
     </div>
   )
 }
