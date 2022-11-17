@@ -93,8 +93,7 @@ export default function SignInForm({accounts}) {
             </form>
             <div className={styles.signUpSection}>
                 Dont have an Account?
-                <span className={styles.signUpText}>
-                <Link href='/signup'>
+                <span className={styles.signUpText}><Link href={'/auth/createaccount'}>
                     Sign Up!
                 </Link>
                 </span>  

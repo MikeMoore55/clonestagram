@@ -94,7 +94,7 @@ export default function SignInForm({accounts}) {
             <div className={styles.signUpSection}>
                 Dont have an Account?
                 <span className={styles.signUpText}>
-                <Link href='/signup'>
+                    <Link href='/signup'>
                     Sign Up!
                 </Link>
                 </span>  

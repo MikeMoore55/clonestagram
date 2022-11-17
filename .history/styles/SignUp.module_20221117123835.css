@@ -133,24 +133,22 @@
 
 @media (min-width: 1000px) {
     .container {
-        padding-top: 7%;
+        padding-top: 4%;
     }
 
     .signUpForm {
         padding: 0% 0% 2% 0%;
-        margin: 2% 5% 1% 5%;
-        width: 90%;
+        margin: 2% 10% 1% 10%;
     }
 
     .heading {
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
 
     .inputAreas {
         position: relative;
         display: grid;
         grid-template-columns: 50% 50%;
-        width: 100%;
     }
 
     .label {
@@ -158,8 +156,7 @@
     }
 
     .input {
-        margin: 2% 8% 1% 8%;
-        width: 84%;
+        margin: 2% 10% 1% 10%;
         font-size: 1em;
         padding: 1%;
     }
@@ -170,8 +167,8 @@
     }
 
     .btn {
-        margin: 2% 40% 0.32% 40%;
-        width: 20%;
+        margin: 1% 35% 0.32% 35%;
+        width: 30%;
         font-size: 1em;
         padding: 1% 1% 1% 1%;
     }

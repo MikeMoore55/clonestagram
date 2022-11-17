@@ -20,13 +20,32 @@ export default function SignUpForm() {
     const createAccount = async (event) => {
         event.preventDefault();
 
-        if (confirmPassword == '' && password == '' && username == '' && confirmPassword == '') {
+        //error handling
+        if (email == '') {
             setErrMsg('fields cannot be blank');
         }
-        else if (confirmPassword !== password) {
+
+         if (username == '') {
+            setErrMsg('fields cannot be blank');
+        }
+
+        if (password == '') {
+            setErrMsg('fields cannot be blank');
+        }
+
+        if (confirmPassword == '') {
+            setErrMsg('fields cannot be blank');
+        }
+
+
+
+        if (confirmPassword !== password) {
             setErrMsg('passwords dont match, try again');
             setPassword('');
             setConfirmPassword('');
+        }
+        else if (errMsg !== '') {
+            console.log('error')
         }
         else {
             const res = await SupaBaseDB
@@ -54,36 +73,26 @@ export default function SignUpForm() {
                 <h2 className={styles.heading}>
                   Sign Up
                 </h2>
-                <div className={styles.inputAreas}>
-                <div>
                 <label className={styles.label}>
                     Email:
                 </label>
                 <input type='text' className={styles.input}
                     value={email} onChange={(e) => setEmail(e.target.value)} placeholder='example@email.com'/>
-                </div>
-                <div>
                 <label className={styles.label}>
                   Username:
                 </label>
                 <input type='text' className={styles.input}
                 value={username} onChange={(e) => setUsername(e.target.value)} placeholder='username'/>
-                </div>
-                <div>
                 <label className={styles.label}>
                     Password:
                 </label>
                 <input type='password' className={styles.input}
                 value={password} onChange={(e) => setPassword(e.target.value)} placeholder='******'/>
-                </div>
-                <div>
                 <label className={styles.label}>
                     Confirm Password:
                 </label>
                 <input type='password' className={styles.input}
                 value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder='******'/>
-                </div>
-                </div>
                 <button type='submit' className={styles.btn}>
                     Create
                 </button>
