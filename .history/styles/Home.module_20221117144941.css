@@ -1,0 +1,16 @@
+.container {
+    position: relative;
+    padding-top: 20%;
+}
+
+.btnsContainer {
+    position: relative;
+    width: 90%;
+    margin: 2% 5% 2% 5%;
+}
+
+.btn {
+    position: relative;
+    width: 40%;
+    margin: 5% 30% 2% 30%;
+}

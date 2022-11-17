@@ -5,22 +5,24 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       
-      <div className={styles.btnContainer}>
-        <button className={styles.btn}>
-          <Link href='/signin'>
-            Sign In
-          </Link>
-        </button>
-      
-        <button className={styles.btn}>
+      <div>
+        <button>
           <Link href='/signup'>
-            Sign Up
+            sign up
           </Link>
         </button>
       </div>
 
+      <div>
+        <button>
+          <Link href='/signup'>
+            sign up
+          </Link>
+        </button>
+      </div>
+      
     </div>
   );
 };

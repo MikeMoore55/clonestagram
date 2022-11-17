@@ -7,16 +7,16 @@ export default function Home() {
   return (
     <div className={styles.container}>
       
-      <div className={styles.btnContainer}>
-        <button className={styles.btn}>
-          <Link href='/signin'>
-            Sign In
+      <div >
+        <button>
+          <Link href='/signup'>
+            sign up
           </Link>
         </button>
       
-        <button className={styles.btn}>
+        <button>
           <Link href='/signup'>
-            Sign Up
+            sign up
           </Link>
         </button>
       </div>

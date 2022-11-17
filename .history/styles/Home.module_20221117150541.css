@@ -3,10 +3,10 @@
     padding-top: 20%;
 }
 
-.btnContainer {
+.btnsContainer {
     position: relative;
     width: 90%;
-    margin: 50% 5% 2% 5%;
+    margin: 2% 5% 2% 5%;
 }
 
 .btn {
