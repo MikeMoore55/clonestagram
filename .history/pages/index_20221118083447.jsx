@@ -10,7 +10,6 @@ export default function Home() {
       <div className={styles.greetingContainer}>
         <p>Welcome to</p>
         <h3>Clonestagram</h3>
-        <div className={styles.btnsContainer}>
         <button className={styles.btn}>
           <Link href='/signin'>
             Sign In
@@ -21,8 +20,7 @@ export default function Home() {
           <Link href='/signup'>
             Sign Up
           </Link>
-          </button>
-        </div>
+        </button>
       </div>
 
       <div className={styles.backgroundFeature}>

@@ -126,13 +126,13 @@
 
 @media (min-width: 1000px) {
     .container {
-        padding-top: 5%;
+        padding-top: 8%;
     }
 
     .greetingContainer {
-        width: 50%;
-        margin: 12% 25% 2% 25%;
-        padding: 3% 5% 4% 5%;
+        width: 70%;
+        margin: 20% 15% 2% 15%;
+        padding: 5% 5% 9% 5%;
         border-radius: 10px;
         box-shadow: 3px 4px 2px 2px rgb(58, 58, 58);
     }
@@ -140,29 +140,21 @@
     .greetingContainer p {
         margin: 1%;
         padding: 0%;
-        font-size: 1.2em;
+        font-size: 1.7em;
     }
 
     .greetingContainer h3 {
         margin: 2%;
         padding: 0%;
-        font-size: 1.8em;
+        font-size: 2.8em;
     }
 
     .btn {
-        width: 80%;
-        margin: 5% 10% 2% 10%;
+        width: 50%;
+        margin: 3% 25% 2% 25%;
         border-radius: 10px;
         padding: 2%;
-        font-size: 1.2em;
-    }
-
-    .btnsContainer {
-        position: relative;
-        width: 100%;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        margin-top: 5%;
+        font-size: 1.6em;
     }
 
     .backgroundFeature {
@@ -180,6 +172,6 @@
     }
 
     .bottomContainer {
-        font-size: 1.2em;
+        font-size: 1.6em;
     }
 }

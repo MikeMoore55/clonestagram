@@ -22,7 +22,7 @@ export default function Home() {
             Sign Up
           </Link>
           </button>
-        </div>
+          </div>
       </div>
 
       <div className={styles.backgroundFeature}>

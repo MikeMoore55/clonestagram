@@ -1,0 +1,31 @@
+.container {
+    position: relative;
+    padding-top: 20%;
+}
+
+.btnContainer {
+    position: relative;
+    width: 90%;
+    margin: 50% 5% 2% 5%;
+}
+
+.btn {
+    position: relative;
+    width: 40%;
+    margin: 2% 30% 2% 30%;
+    background: rgb(223, 40, 255);
+    background: linear-gradient(90deg, rgba(223, 40, 255, 1) 24%, rgba(109, 20, 255, 1) 55%, rgba(0, 1, 255, 1) 71%);
+    border: none;
+    border-radius: 10px;
+    padding: 1%;
+    font-size: 1.2em;
+}
+
+.bottomContainer {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    background-color: white;
+}

@@ -131,8 +131,8 @@
 
     .greetingContainer {
         width: 50%;
-        margin: 12% 25% 2% 25%;
-        padding: 3% 5% 4% 5%;
+        margin: 5% 25% 2% 25%;
+        padding: 5% 5% 9% 5%;
         border-radius: 10px;
         box-shadow: 3px 4px 2px 2px rgb(58, 58, 58);
     }
@@ -162,7 +162,6 @@
         width: 100%;
         display: grid;
         grid-template-columns: 50% 50%;
-        margin-top: 5%;
     }
 
     .backgroundFeature {
@@ -180,6 +179,6 @@
     }
 
     .bottomContainer {
-        font-size: 1.2em;
+        font-size: 1.6em;
     }
 }
