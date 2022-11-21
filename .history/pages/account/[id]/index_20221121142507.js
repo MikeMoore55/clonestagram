@@ -1,7 +1,7 @@
 import React from 'react';
 import { SupaBaseDB } from '../../../utils/dbconnect';
 import AccountDisplay from '../../../components/account/AccountDisplay';
-import BottomNav from '../../../components/Layout/BottomNav';
+import BottomNav from '../../../components/Layout/BottomNav'
 
 export default function Account({ account }) {
 
@@ -9,10 +9,8 @@ export default function Account({ account }) {
         <div>
             {
                 account.map(user =>
-                    <div key={user.account_id}>
-                        <AccountDisplay user={user} />
-                        <BottomNav userId={user.account_id} />
-                    </div>
+                    <AccountDisplay key={user.account_id} user={user} />
+
                 )
             }
         </div>

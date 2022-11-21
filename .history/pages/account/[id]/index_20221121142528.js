@@ -9,10 +9,8 @@ export default function Account({ account }) {
         <div>
             {
                 account.map(user =>
-                    <div key={user.account_id}>
-                        <AccountDisplay user={user} />
-                        <BottomNav userId={user.account_id} />
-                    </div>
+                    <AccountDisplay key={user.account_id} user={user} />
+                    <BottomNav userId={user.account_id}
                 )
             }
         </div>
