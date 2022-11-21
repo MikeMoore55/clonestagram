@@ -45,16 +45,16 @@ export default function SignInForm({accounts}) {
             }
             else {
                 //have the user id set as cookie to be used across the application
-                setCookie("user", account.account_id, {
+                setCookie("user", account.accout_id, {
                 path: "/",
                 maxAge: 1800,
                 sameSite: true,
                 });
                 setErrmsg('');
-                router
+                /* router
                 .push({
                     pathname: '/home', // when successful take to the feed page
-                })  
+                })  */
             };
         };
     };

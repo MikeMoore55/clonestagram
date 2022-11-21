@@ -37,15 +37,14 @@ export default function SignInForm({accounts}) {
 
             //get user account if email exists in accounts in db
             const account = allAccounts[indexNr] 
-            
-            console.log(account)
+
             
             if (password !== account.password) {
                 setErrmsg('password is incorrect, try again');
             }
             else {
                 //have the user id set as cookie to be used across the application
-                setCookie("user", account.account_id, {
+                setCookie("user", account.id, {
                 path: "/",
                 maxAge: 1800,
                 sameSite: true,
@@ -54,7 +53,7 @@ export default function SignInForm({accounts}) {
                 router
                 .push({
                     pathname: '/home', // when successful take to the feed page
-                })  
+                }) 
             };
         };
     };

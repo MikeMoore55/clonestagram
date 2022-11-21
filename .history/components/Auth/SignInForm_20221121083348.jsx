@@ -51,10 +51,10 @@ export default function SignInForm({accounts}) {
                 sameSite: true,
                 });
                 setErrmsg('');
-                router
+                /* router
                 .push({
                     pathname: '/home', // when successful take to the feed page
-                })  
+                })  */
             };
         };
     };
