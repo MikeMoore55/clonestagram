@@ -2,6 +2,7 @@ import React from 'react';
 import { SupaBaseDB } from '../../../utils/dbconnect';
 import AccountDisplay from '../../../components/account/AccountDisplay';
 
+
 export default function Account({ account }) {
 
     return (

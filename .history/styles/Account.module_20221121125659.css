@@ -1,0 +1,43 @@
+.container {
+    position: relative;
+    padding-top: 20%;
+}
+
+.profile {
+    position: relative;
+    margin: 2% 5% 2% 5%;
+    width: 90%;
+}
+
+.img {
+    position: relative;
+    width: 100%;
+}
+
+.username {
+    position: relative;
+    text-align: center;
+}
+
+.profilePic {
+    position: relative;
+    width: 20%;
+    height: 20%;
+    margin: 1% 40% 1% 40%;
+    border-radius: 50%;
+}
+
+.dob {
+    position: relative;
+    text-align: center;
+}
+
+.bioHeading {
+    position: relative;
+    text-align: center;
+}
+
+.bio {
+    position: relative;
+    text-align: center;
+}

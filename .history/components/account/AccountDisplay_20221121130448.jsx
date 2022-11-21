@@ -16,12 +16,9 @@ export default function AccountDisplay({ user }) {
                     <p className={styles.bio}>{user.bio}</p>
                 </div>
             </div>
-            <h4 className={styles.postHeading}>
+            <h4>
                 Posts
             </h4>
-            <div className={styles.posts}>
-
-            </div>
         </div>
     );
 };

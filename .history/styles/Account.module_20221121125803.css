@@ -1,0 +1,50 @@
+.container {
+    position: relative;
+    padding-top: 20%;
+}
+
+.profile {
+    position: relative;
+    margin: 2% 5% 2% 5%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.img {
+    position: relative;
+    width: 100%;
+}
+
+.info {
+    position: relative;
+    width: 100%;
+}
+
+.username {
+    position: relative;
+    text-align: center;
+}
+
+.profilePic {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: 1% 40% 1% 40%;
+    border-radius: 50%;
+}
+
+.dob {
+    position: relative;
+    text-align: center;
+}
+
+.bioHeading {
+    position: relative;
+    text-align: center;
+}
+
+.bio {
+    position: relative;
+    text-align: center;
+}

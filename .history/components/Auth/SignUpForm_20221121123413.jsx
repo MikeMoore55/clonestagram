@@ -36,7 +36,7 @@ export default function SignUpForm() {
                         email: email,
                         password: password,
                         username: username,
-                        profile_pic: avatar,
+                        profile_pic: avatar
                     }
                 ]);
             if (res.error) {

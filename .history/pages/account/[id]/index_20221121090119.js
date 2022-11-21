@@ -1,17 +1,12 @@
 import React from 'react';
 import { SupaBaseDB } from '../../../utils/dbconnect';
-import AccountDisplay from '../../../components/account/AccountDisplay';
 
 export default function Account({ account }) {
 
+    console.log(account)
+
     return (
-        <div>
-            {
-                account.map(user =>
-                    <AccountDisplay key={user.account_id} user={user} />
-                )
-            }
-        </div>
+        <div>Account</div>
     );
 };
 

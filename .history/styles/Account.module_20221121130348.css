@@ -1,0 +1,61 @@
+.container {
+    position: relative;
+    padding-top: 20%;
+}
+
+.profile {
+    position: relative;
+    margin: 2% 5% 2% 5%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border-bottom: 1px solid black;
+}
+
+.img {
+    position: relative;
+    width: 100%;
+}
+
+.info {
+    position: relative;
+    width: 100%;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.username {
+    position: relative;
+    text-align: left;
+    margin: 2%;
+    padding: 0%;
+}
+
+.profilePic {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    margin: 5% 0% 5% 0%;
+    border-radius: 50%;
+}
+
+.dob {
+    position: relative;
+    text-align: left;
+    margin: 2%;
+    padding: 0%;
+}
+
+.bioHeading {
+    position: relative;
+    text-align: left;
+    margin: 2%;
+    padding: 0%;
+}
+
+.bio {
+    position: relative;
+    text-align: left;
+    margin: 0%;
+    padding: 0%;
+}

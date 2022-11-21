@@ -19,9 +19,6 @@ export default function AccountDisplay({ user }) {
             <h4 className={styles.postHeading}>
                 Posts
             </h4>
-            <div className={styles.posts}>
-
-            </div>
         </div>
     );
 };
