@@ -6,7 +6,7 @@ import styles from '../../styles/SignIn.module.css';
 
 export default function SignInForm({accounts}) {
 
-    const allAccounts = accounts;
+    const allAccounts = [accounts];
 
     const router = useRouter();  
 
@@ -38,6 +38,7 @@ export default function SignInForm({accounts}) {
             //get user account if email exists in accounts in db
             const account = allAccounts[indexNr] 
             
+            console.log(account)
             
             if (password !== account.password) {
                 setErrmsg('password is incorrect, try again');

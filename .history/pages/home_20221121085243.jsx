@@ -5,12 +5,12 @@ import BottomNav from '../components/Layout/BottomNav';
 
 export default function Home({ data }) {
     
-    const userId = data.user;
+    const userId = [data];
     console.log(userId);
 
     return (
         <div>
-            <BottomNav userId={userId}/>
+            <BottomNav userId={userId}
         </div>
     );
 };

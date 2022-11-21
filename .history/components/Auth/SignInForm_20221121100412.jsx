@@ -38,6 +38,7 @@ export default function SignInForm({accounts}) {
             //get user account if email exists in accounts in db
             const account = allAccounts[indexNr] 
             
+            console.log(account)
             
             if (password !== account.password) {
                 setErrmsg('password is incorrect, try again');

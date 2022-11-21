@@ -1,10 +1,7 @@
 import React from 'react';
 import { SupaBaseDB } from '../../../utils/dbconnect';
 
-export default function Account({ account }) {
-
-    console.log(account)
-
+export default function Account() {
     return (
         <div>Account</div>
     );

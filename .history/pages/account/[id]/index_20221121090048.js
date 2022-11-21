@@ -1,10 +1,7 @@
 import React from 'react';
 import { SupaBaseDB } from '../../../utils/dbconnect';
 
-export default function Account({ account }) {
-
-    console.log(account)
-
+export default function Account() {
     return (
         <div>Account</div>
     );
@@ -15,7 +12,7 @@ export const getStaticProps = async (context) => {
     const res = await SupaBaseDB
         .from("account")
         .select('*')
-        .eq('account_id', context.params.id)
+        .eq('account_id', context.params.userId)
     const account = res.data;
 
     return {
@@ -34,7 +31,7 @@ export const getStaticPaths = async () => {
         .select('*')
     const account = res.data;
 
-    const ids = account.map(account => account.account_id);
+    const ids = account.map(account => account.id);
 
     const paths = ids.map(id => ({ params: { id: id.toString() } }));
 

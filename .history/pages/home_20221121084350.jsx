@@ -1,25 +1,17 @@
 import React from 'react';
 import { parseCookies } from '../helpers/cookie';
-import Link from 'next/link';
-import BottomNav from '../components/Layout/BottomNav';
 
 export default function Home({ data }) {
-    
-    const userId = data.user;
-    console.log(userId);
-
+    console.log(data)
     return (
-        <div>
-            <BottomNav userId={userId}/>
-        </div>
+        <div>Home</div>
     );
 };
 
-
-// get cookies to get userId
 export async function getServerSideProps({ req, res }) {
     const data = parseCookies(req);
 
+  // And then get element from cookie by name
     if (res) {
         if (Object.keys(data).length === 0 && data.constructor === Object) {
             res.writeHead(301, { Location: "/" });
@@ -28,11 +20,9 @@ export async function getServerSideProps({ req, res }) {
     }
 
     return {
-        props: {
-            data: data && data,
-        }
-    };
-};
+        props: { data: data && data, }
+    }
+} 
 
     
 
