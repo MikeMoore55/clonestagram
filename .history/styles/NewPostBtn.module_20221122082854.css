@@ -1,0 +1,21 @@
+.btnContainer {
+    position: relative;
+    width: 100%;
+}
+
+.addBtn {
+    position: relative;
+    width: 90%;
+    margin: 0% 5% 0% 5%;
+    background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
+    border: none;
+    border-radius: 50%;
+    padding: 2% 1% 2% 1%;
+    font-size: 1.2em;
+    color: white;
+    font-weight: 800;
+}
+
+.addBtn:active {
+    transform: scale((0.9));
+}

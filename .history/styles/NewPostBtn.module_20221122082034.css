@@ -1,0 +1,15 @@
+.btnContainer {
+    position: fixed;
+    bottom: 10%;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.addBtn {
+    position: relative;
+    width: 20%;
+    margin: 2% 40% 2% 40%;
+    background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
+}

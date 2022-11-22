@@ -12,6 +12,7 @@ export default function Home({ data }) {
 
     return (
         <div>
+            <NewPostBtn/>
             <BottomNav userId={userId}/>
         </div>
     );

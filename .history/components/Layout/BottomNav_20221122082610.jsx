@@ -25,7 +25,7 @@ export default function BottomNav({userId}) {
                 </Link>
               </div>
               <div className={styles.navLink}>
-                <NewPostBtn/>
+                <NewPostBtn
             </div>
             <div className={styles.navLink}>
                 <Link href={'/account/[id]'} as={`/account/${userId}`}>

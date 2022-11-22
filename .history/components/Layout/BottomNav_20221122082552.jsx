@@ -23,9 +23,6 @@ export default function BottomNav({userId}) {
                         <AiOutlineTeam />
                     </span>
                 </Link>
-              </div>
-              <div className={styles.navLink}>
-                <NewPostBtn/>
             </div>
             <div className={styles.navLink}>
                 <Link href={'/account/[id]'} as={`/account/${userId}`}>
