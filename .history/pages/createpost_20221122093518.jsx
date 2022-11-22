@@ -1,11 +1,7 @@
 import React from 'react';
 import CreatePostForm from '../components/posts/CreatePostForm';
-import { parseCookies } from '../helpers/cookie';
 
-export default function CreatePost({data}) {
-  
-  const userId = data.user;
-
+export default function CreatePost() {
   return (
     <div>
       <br />
@@ -14,7 +10,7 @@ export default function CreatePost({data}) {
       <br/>
       <br/>
     
-      <CreatePostForm userId={userId} />
+      <CreatePostForm />
     </div>
   );
 };

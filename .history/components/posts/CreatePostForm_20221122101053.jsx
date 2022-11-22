@@ -40,6 +40,10 @@ export default function CreatePostForm({userId}) {
     const createPost = async (event) => {
         event.preventDefault();
 
+        if (postImg == '' || postText == '') {
+            setErrMsg('please post something')
+        }
+        else {
             const res = await SupaBaseDB
                 .from("posts")
                 .insert([
@@ -59,7 +63,7 @@ export default function CreatePostForm({userId}) {
                 router.push('/home')
             }
     
-        
+        }
     }
 
     return (

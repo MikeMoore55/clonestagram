@@ -17,8 +17,8 @@ export default function CreatePostForm({userId}) {
     console.log(id);
 
 
-    const handleImageUpload = async (e) => {
-        e.preventDefault();
+    const handleImageUpload = async (event) => {
+        event.preventDefault();
         
         let file;
 
@@ -40,6 +40,10 @@ export default function CreatePostForm({userId}) {
     const createPost = async (event) => {
         event.preventDefault();
 
+        if (postImg == '' || postText == '') {
+            setErrMsg('please post something')
+        }
+        else {
             const res = await SupaBaseDB
                 .from("posts")
                 .insert([
@@ -59,12 +63,12 @@ export default function CreatePostForm({userId}) {
                 router.push('/home')
             }
     
-        
+        }
     }
 
     return (
         <div>
-            <form onSubmit={createPost}>
+            <form>
                 <label>Whats on your mind?</label>
                 <input
                     type='text'
@@ -75,12 +79,11 @@ export default function CreatePostForm({userId}) {
                 <label>Post Something?</label>
                 <input
                     type='file'
-                    accept="image/*"
-                    onChange={(e) => { handleImageUpload(e); }}
+                    value={postImg}
+                    onChange={(e) => handleImageUpload(e.target.value)}
                 />
                 <label>Caption</label>
                 <input type='text' placeholder='How was your day?' />
-                <p>{errMsg}</p>
                 <button type='submit'>Post</button>
                 <Link href={'/home'}>
                     <button>cancel</button>

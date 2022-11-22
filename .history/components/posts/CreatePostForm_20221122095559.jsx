@@ -17,8 +17,8 @@ export default function CreatePostForm({userId}) {
     console.log(id);
 
 
-    const handleImageUpload = async (e) => {
-        e.preventDefault();
+    const handleImageUpload = async(event) => {
+        event.preventDefault();
         
         let file;
 
@@ -27,19 +27,24 @@ export default function CreatePostForm({userId}) {
         }
 
         const res = await SupaBaseDB
-            .storage.from("post-pics").upload("public/" + file?.name, file);
+            .storage.from("posts").upload("public/" + file?.name, file);
         
-        setPostImg("https://brhqhwzkkolxuilfhwkx.supabase.co/storage/v1/object/public/post-pics/" + file.name,file)
+        setAvatar("https://gwcwwvglnfdznumwgtfl.supabase.co/storage/v1/object/public/images/public/" + file.name,file)
+
         if (res.data) {
         console.log(res.data);
-        } else if (res.error) {
-        console.log(res.error['message']);
+        } else if (error) {
+        console.log(res.error);
         }
     }
 
     const createPost = async (event) => {
         event.preventDefault();
 
+        if (postImg == '' || postText == '') {
+            setErrMsg('please post something')
+        }
+        else {
             const res = await SupaBaseDB
                 .from("posts")
                 .insert([
@@ -59,28 +64,19 @@ export default function CreatePostForm({userId}) {
                 router.push('/home')
             }
     
-        
+        }
     }
 
     return (
         <div>
-            <form onSubmit={createPost}>
+            <form>
                 <label>Whats on your mind?</label>
-                <input
-                    type='text'
-                    value={postText}
-                    onChange={(e)=>setPostText(e.target.value)}
-                    placeholder='say something' />
+                <input type='text' placeholder='say something' />
                 <p>or</p>
                 <label>Post Something?</label>
-                <input
-                    type='file'
-                    accept="image/*"
-                    onChange={(e) => { handleImageUpload(e); }}
-                />
+                <input type='file' />
                 <label>Caption</label>
                 <input type='text' placeholder='How was your day?' />
-                <p>{errMsg}</p>
                 <button type='submit'>Post</button>
                 <Link href={'/home'}>
                     <button>cancel</button>

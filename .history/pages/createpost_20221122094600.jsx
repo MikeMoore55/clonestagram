@@ -4,7 +4,7 @@ import { parseCookies } from '../helpers/cookie';
 
 export default function CreatePost({data}) {
   
-  const userId = data.user;
+  const userId = data;
 
   return (
     <div>
