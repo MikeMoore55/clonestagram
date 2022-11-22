@@ -7,7 +7,7 @@ import NewPostBtn from '../components/Layout/NewPostBtn';
 
 export default function Home({ data }) {
     
-    const userId = data;
+    const userId = data.user;
     console.log(userId);
 
     return (

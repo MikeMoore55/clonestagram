@@ -7,9 +7,7 @@ export default function CreatePost() {
       <br />
       <br/>
       <br/>
-      <br/>
-      <br/>
-    
+      
       <CreatePostForm />
     </div>
   );

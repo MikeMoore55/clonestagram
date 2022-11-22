@@ -3,14 +3,8 @@ import CreatePostForm from '../components/posts/CreatePostForm';
 
 export default function CreatePost() {
   return (
-    <div>
-      <br />
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-    
-      <CreatePostForm />
+      <div>
+          <CreatePostForm/>
     </div>
-  );
-};
+  )
+}
