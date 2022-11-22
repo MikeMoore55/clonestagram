@@ -1,0 +1,12 @@
+.container {
+    position: relative;
+    padding-top: 20%;
+    width: 100%;
+    margin: 0%;
+}
+
+.form {
+    position: relative;
+    width: 80%;
+    margin: 2% 10% 2% 10%;
+}

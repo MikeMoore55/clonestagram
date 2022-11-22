@@ -99,11 +99,9 @@ export default function CreatePostForm({userId}) {
                 <p className={styles.errMsg}>{errMsg}</p>
                 <div className={styles.btnContainer}>
                     <button className={styles.submitBtn} type='submit'>Post</button>
-                    <button className={styles.cancelBtn}>
-                        <Link href={'/home'}>
-                            Cancel
-                        </Link>
-                    </button>
+                    <Link href={'/home'}>
+                        <button className={styles.cancelBtn}>Cancel</button>
+                    </Link>
                 </div>
             </form>
             <div className={styles.backgroundFeature}>

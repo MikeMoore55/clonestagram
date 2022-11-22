@@ -2,8 +2,6 @@ import React,{useState} from 'react';
 import { SupaBaseDB } from '../../utils/dbconnect';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { AiOutlinePicture } from "react-icons/ai";
-import styles from '../../styles/CreatePostForm.module.css';
 
 export default function CreatePostForm({userId}) {
 
@@ -65,50 +63,30 @@ export default function CreatePostForm({userId}) {
     }
 
     return (
-        <div className={styles.container}>
-            <form onSubmit={createPost} className={styles.form}>
-                <h3 className={styles.heading}>
-                    Whats on your mind?
-                </h3>
+        <div>
+            <form onSubmit={createPost}>
+                <h3>Post Something Amazing</h3>
+                <label>Whats on your mind?</label>
                 <input
-                    className={styles.textInput}
                     type='text'
                     value={postText}
                     onChange={(e)=>setPostText(e.target.value)}
                     placeholder='say something' />
-                <p className={styles.text}>or</p>
-                <label for='fileInput' className={styles.ImageLabel}>
-                    
-                    <span className={styles.imageIcon}>
-                        <AiOutlinePicture/>
-                    </span>
-                    <input
-                        id='fileInput'
-                        className={styles.fileInput}
-                        type='file'
-                        accept="image/*"
-                        onChange={(e) => { handleImageUpload(e); }}
-                    />
-                </label>
-                <br/>
+                <p>or</p>
+                <label>Post Something?</label>
                 <input
-                    className={styles.captionInput}
-                    type='text'
-                    placeholder='Caption'
+                    type='file'
+                    accept="image/*"
+                    onChange={(e) => { handleImageUpload(e); }}
                 />
-                <p className={styles.errMsg}>{errMsg}</p>
-                <div className={styles.btnContainer}>
-                    <button className={styles.submitBtn} type='submit'>Post</button>
-                    <button className={styles.cancelBtn}>
-                        <Link href={'/home'}>
-                            Cancel
-                        </Link>
-                    </button>
-                </div>
+                <label>Caption</label>
+                <input type='text' placeholder='How was your day?' />
+                <p>{errMsg}</p>
+                <button type='submit'>Post</button>
+                <Link href={'/home'}>
+                    <button>cancel</button>
+                </Link>
             </form>
-            <div className={styles.backgroundFeature}>
-                1
-            </div>
         </div>
     );
 };

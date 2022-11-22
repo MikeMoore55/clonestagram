@@ -2,7 +2,6 @@ import React,{useState} from 'react';
 import { SupaBaseDB } from '../../utils/dbconnect';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { AiOutlinePicture } from "react-icons/ai";
 import styles from '../../styles/CreatePostForm.module.css';
 
 export default function CreatePostForm({userId}) {
@@ -77,36 +76,24 @@ export default function CreatePostForm({userId}) {
                     onChange={(e)=>setPostText(e.target.value)}
                     placeholder='say something' />
                 <p className={styles.text}>or</p>
-                <label for='fileInput' className={styles.ImageLabel}>
-                    
-                    <span className={styles.imageIcon}>
-                        <AiOutlinePicture/>
-                    </span>
-                    <input
-                        id='fileInput'
-                        className={styles.fileInput}
-                        type='file'
-                        accept="image/*"
-                        onChange={(e) => { handleImageUpload(e); }}
-                    />
-                </label>
-                <br/>
+                <input
+                    className={styles.fileInput}
+                    type='file'
+                    accept="image/*"
+                    onChange={(e) => { handleImageUpload(e); }}
+                />
                 <input
                     className={styles.captionInput}
                     type='text'
                     placeholder='Caption'
                 />
                 <p className={styles.errMsg}>{errMsg}</p>
-                <div className={styles.btnContainer}>
-                    <button className={styles.submitBtn} type='submit'>Post</button>
-                    <button className={styles.cancelBtn}>
-                        <Link href={'/home'}>
-                            Cancel
-                        </Link>
-                    </button>
-                </div>
+                <button className={styles.submitBtn} type='submit'>Post</button>
+                <Link href={'/home'}>
+                    <button className={styles.cancelBtn}>Cancel</button>
+                </Link>
             </form>
-            <div className={styles.backgroundFeature}>
+               <div className={styles.backgroundFeature}>
                 1
             </div>
         </div>

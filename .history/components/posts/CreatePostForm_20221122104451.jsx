@@ -82,6 +82,8 @@ export default function CreatePostForm({userId}) {
                     <span className={styles.imageIcon}>
                         <AiOutlinePicture/>
                     </span>
+                    <br/>
+                    Upload an Image
                     <input
                         id='fileInput'
                         className={styles.fileInput}
@@ -97,14 +99,10 @@ export default function CreatePostForm({userId}) {
                     placeholder='Caption'
                 />
                 <p className={styles.errMsg}>{errMsg}</p>
-                <div className={styles.btnContainer}>
-                    <button className={styles.submitBtn} type='submit'>Post</button>
-                    <button className={styles.cancelBtn}>
-                        <Link href={'/home'}>
-                            Cancel
-                        </Link>
-                    </button>
-                </div>
+                <button className={styles.submitBtn} type='submit'>Post</button>
+                <Link href={'/home'}>
+                    <button className={styles.cancelBtn}>Cancel</button>
+                </Link>
             </form>
             <div className={styles.backgroundFeature}>
                 1
