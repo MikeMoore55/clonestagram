@@ -110,7 +110,6 @@ export default function CreatePostForm({userId}) {
             <div className={styles.backgroundFeature}>
                 1
             </div>
-            <Footer/>
         </div>
     );
 };

@@ -1,0 +1,22 @@
+.footer {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 2%;
+}
+
+@media (min-width: 490px) {
+    .footer {
+        font-size: 1.7em;
+    }
+}
+
+@media (min-width: 1000px) {
+    .footer {
+        font-size: 1em;
+    }
+}
