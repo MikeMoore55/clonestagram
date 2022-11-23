@@ -9,9 +9,7 @@ import styles from "../../styles/BottomNav.module.css"
 
 
 export default function BottomNav({userId}) {
-  
-    const id = userId;
-    return (
+  return (
       <div>
           <nav className={styles.navContainer}>
             <div className={styles.navLink}>
@@ -30,7 +28,7 @@ export default function BottomNav({userId}) {
                 <NewPostBtn/>
             </div>
             <div className={styles.navLink}>
-                <Link href={'/account/[id]'} as={`/account/${id}`}>
+                <Link href={'/account/[id]'} as={`/account/${userId}`}>
                     <span className={styles.icon}>
                         <AiOutlineUser />
                     </span>

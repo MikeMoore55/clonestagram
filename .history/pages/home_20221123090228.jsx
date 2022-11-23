@@ -18,6 +18,13 @@ export default function Home({ data }) {
     const userId = cookieId.toString()
     console.log(userId);
 
+/*    const id = [router.query];
+    function extractId(arr, prop) {
+        const extractedValue = arr.map(item => item[prop]);
+        return extractedValue;
+    }
+    const userId = extractId(id, 'id') */
+
     return (
         <div>
             <div>

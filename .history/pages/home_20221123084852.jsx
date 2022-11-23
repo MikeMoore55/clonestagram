@@ -5,17 +5,10 @@ import BottomNav from '../components/Layout/BottomNav';
 import NewPostBtn from '../components/Layout/NewPostBtn';
 import CreatePostForm from '../components/posts/CreatePostForm';
 
-export default function Home({ data }) {
+export default async function Home({ data }) {
     
-    const id = [data];
-    function extractId(arr, prop) {
-        const extractedValue = arr.map(item => item[prop])
-        return extractedValue;
-    }
+    const userId = await data['user'];
 
-    const cookieId = extractId(id, 'user')
-
-    const userId = cookieId.toString()
     console.log(userId);
 
     return (

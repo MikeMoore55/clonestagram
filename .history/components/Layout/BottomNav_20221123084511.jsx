@@ -10,7 +10,7 @@ import styles from "../../styles/BottomNav.module.css"
 
 export default function BottomNav({userId}) {
   
-    const id = userId;
+    const id = userId.user;
     return (
       <div>
           <nav className={styles.navContainer}>

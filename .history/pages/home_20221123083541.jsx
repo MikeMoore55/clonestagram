@@ -7,23 +7,32 @@ import CreatePostForm from '../components/posts/CreatePostForm';
 
 export default function Home({ data }) {
     
-    const id = [data];
-    function extractId(arr, prop) {
-        const extractedValue = arr.map(item => item[prop])
-        return extractedValue;
-    }
+    const userId = data.user;
 
-    const cookieId = extractId(id, 'user')
-
-    const userId = cookieId.toString()
     console.log(userId);
+
+    const [isActive, setIsActive] = useState(false);
+    const [msg, setMsg] = useState('new post')
+
+    const styles = {
+        appear:{
+            display: isActive ? "block" : "none",
+        }
+    };
 
     return (
         <div>
             <div>
 
             </div>
-            
+            <div>
+                <button onClick={() => { setIsActive(true) }}>
+                    {msg}
+                </button>
+            </div>
+            <div>
+                <CreatePostForm userId={userId} />
+            </div>
             <BottomNav userId={userId}/>
         </div>
     );

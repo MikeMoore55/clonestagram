@@ -1,29 +1,18 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { parseCookies } from '../helpers/cookie';
 import Link from 'next/link';
 import BottomNav from '../components/Layout/BottomNav';
 import NewPostBtn from '../components/Layout/NewPostBtn';
-import CreatePostForm from '../components/posts/CreatePostForm';
+
 
 export default function Home({ data }) {
     
-    const id = [data];
-    function extractId(arr, prop) {
-        const extractedValue = arr.map(item => item[prop])
-        return extractedValue;
-    }
-
-    const cookieId = extractId(id, 'user')
-
-    const userId = cookieId.toString()
+    const userId = data.user;
+    
     console.log(userId);
 
     return (
         <div>
-            <div>
-
-            </div>
-            
             <BottomNav userId={userId}/>
         </div>
     );

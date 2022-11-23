@@ -18,6 +18,7 @@ export default function Home({ data }) {
     const userId = cookieId.toString()
     console.log(userId);
 
+
     return (
         <div>
             <div>
