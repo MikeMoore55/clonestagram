@@ -49,7 +49,7 @@ export async function getServerSideProps({ req, res }) {
     const posts = post.data
 
     const accounts = await SupaBaseDB
-        .from("account")
+        .from("posts")
         .select("*")
 
     const account = accounts.data

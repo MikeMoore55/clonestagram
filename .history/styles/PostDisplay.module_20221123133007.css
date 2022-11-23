@@ -1,0 +1,13 @@
+.postList {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background-color: white;
+    width: 80%;
+    margin: 0% 10% 0% 10%;
+}
+
+.posts {
+    position: relative;
+    background-color: white;
+}

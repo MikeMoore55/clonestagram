@@ -1,0 +1,39 @@
+.container {
+    position: relative;
+    background-color: #ffffff;
+    margin: 0% 0% 0% 0%;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    border-top: black 1px solid;
+}
+
+.profileSection {
+    position: relative;
+    border-bottom: black 1px solid;
+    padding: 1% 1% 1% 1%;
+}
+
+.postImg {
+    position: relative;
+    width: 90%;
+    margin: 7% 5% 0% 5%;
+}
+
+.caption {
+    position: relative;
+    margin: 2% 5% 3% 5%;
+    font-size: 1.1em;
+}
+
+.postInteraction {
+    position: relative;
+    margin: 2% 5% 2% 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.comments {
+    position: relative;
+    text-align: end;
+}

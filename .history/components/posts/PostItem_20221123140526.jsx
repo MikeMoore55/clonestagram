@@ -25,16 +25,14 @@ export default function PostItem({ posted, account }) {
 
     }
 
-    const postProfiles = getUserProfile(account, posted.user_id)
+    console.log(getUserProfile(account, posted.user_id))
 
 
     return (
         <div className={styles.container}>
             <div className={styles.profileSection}>
-                {postProfiles.map(profile => {
-                    <div key={profile.account_id}>
-                        <h4>{profile.username}</h4>
-                    </div>
+                {getUserProfile(account, posted.user_id).map(profile => {
+                    <h2>{profile[username]}</h2>
                 })}
             </div>
             <div className={styles.postContent}>

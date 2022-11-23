@@ -94,8 +94,6 @@ export default function CreatePostForm({userId}) {
                 <br/>
                 <input
                     className={styles.captionInput}
-                    value={caption}
-                    onChange={(e) => setCaption(e.target.value)}
                     type='text'
                     placeholder='Caption'
                 />

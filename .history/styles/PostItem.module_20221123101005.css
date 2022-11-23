@@ -1,0 +1,10 @@
+.container {
+    position: relative;
+    background-color: white;
+    margin: 0% 5% 0% 5%;
+}
+
+.postImg {
+    position: relative;
+    width: 100%;
+}

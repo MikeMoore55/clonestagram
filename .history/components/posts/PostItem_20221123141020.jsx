@@ -25,13 +25,13 @@ export default function PostItem({ posted, account }) {
 
     }
 
-    const postProfiles = getUserProfile(account, posted.user_id)
+    const postprofiles = getUserProfile(account, posted.user_id)
 
 
     return (
         <div className={styles.container}>
             <div className={styles.profileSection}>
-                {postProfiles.map(profile => {
+                {getUserProfile(account, posted.user_id).map(profile => {
                     <div key={profile.account_id}>
                         <h4>{profile.username}</h4>
                     </div>

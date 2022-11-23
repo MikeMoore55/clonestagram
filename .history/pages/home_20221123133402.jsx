@@ -18,6 +18,7 @@ export default function Home({ data, posts, account }) {
     const cookieId = extractId(id, 'user')
 
     const userId = cookieId.toString()
+    console.log(userId);
 
     return (
         <div>
@@ -49,7 +50,7 @@ export async function getServerSideProps({ req, res }) {
     const posts = post.data
 
     const accounts = await SupaBaseDB
-        .from("account")
+        .from("posts")
         .select("*")
 
     const account = accounts.data

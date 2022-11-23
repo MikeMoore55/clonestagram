@@ -25,17 +25,21 @@ export default function PostItem({ posted, account }) {
 
     }
 
-    const postProfiles = getUserProfile(account, posted.user_id)
+    console.log(getUserProfile(account, posted.user_id))
+    /* let receiverAccNr = 0;
+    for (var i = 0; i < account.length; i++) {
+        if (account[i].id == receiverId) {
+        receiverAccNr = i;
+        break;
+        }
+    }
+    const receiverAcc = [account[receiverAccNr]]; */
 
 
     return (
         <div className={styles.container}>
             <div className={styles.profileSection}>
-                {postProfiles.map(profile => {
-                    <div key={profile.account_id}>
-                        <h4>{profile.username}</h4>
-                    </div>
-                })}
+                <h4>{posted.user_id}</h4>
             </div>
             <div className={styles.postContent}>
                 {/* the post can either be a text format or just a plain image  */}
