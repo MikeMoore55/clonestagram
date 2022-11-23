@@ -57,7 +57,7 @@ export async function getServerSideProps({ req, res }) {
   return {
     props: {
       data: data && data,
-      account: account,
+      account: account
     }
   };
 };

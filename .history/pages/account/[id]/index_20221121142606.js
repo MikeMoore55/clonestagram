@@ -35,6 +35,7 @@ export const getStaticProps = async (context) => {
 
 };
 
+
 export const getStaticPaths = async () => {
 
     const res = await SupaBaseDB

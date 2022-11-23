@@ -98,7 +98,6 @@ export default function SignInForm({accounts}) {
 
             </form>
 
-            {/* for a cool background effect */}
             <div className={styles.backgroundFeature}>
                 1
             </div>        

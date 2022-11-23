@@ -1,7 +1,10 @@
 import React,{useState} from 'react';
 import { parseCookies } from '../helpers/cookie';
 import { SupaBaseDB } from '../utils/dbconnect';
+import Link from 'next/link';
 import BottomNav from '../components/Layout/BottomNav';
+import NewPostBtn from '../components/Layout/NewPostBtn';
+import CreatePostForm from '../components/posts/CreatePostForm';
 import DisplayPosts from '../components/posts/DisplayPosts';
 
 export default function Home({ data, posts }) {
@@ -29,6 +32,7 @@ export default function Home({ data, posts }) {
 
     );
 };
+
 
 // get cookies to get userId
 export async function getServerSideProps({ req, res }) {

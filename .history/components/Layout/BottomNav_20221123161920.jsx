@@ -7,17 +7,17 @@ import { AiOutlineUser } from "react-icons/ai"; // personal profile icon
 import { BsFillDoorOpenFill } from "react-icons/bs"; // log put icon
 import styles from "../../styles/BottomNav.module.css"
 
-// we parse id here to be used for the routing
+
 export default function BottomNav({userId}) {
-    
+  
     const id = userId;
 
     return (
-        <nav className={styles.navContainer}>
-                
+      <div>
+          <nav className={styles.navContainer}>
             <div className={styles.navLink}>
                 <Link href={'/home'}>
-                    <span className={styles.icon}><AiFillHome /></span>
+                    <span className={styles.icon}><AiFillHome/></span>
                 </Link>
             </div>
                 
@@ -27,9 +27,9 @@ export default function BottomNav({userId}) {
                         <AiOutlineTeam />
                     </span>
                 </Link>
-            </div>
-            <div className={styles.navLink}>
-                <NewPostBtn />
+              </div>
+              <div className={styles.navLink}>
+                <NewPostBtn/>
             </div>
                 
             <div className={styles.navLink}>
@@ -46,8 +46,8 @@ export default function BottomNav({userId}) {
                         <BsFillDoorOpenFill />
                     </span>
                 </Link>
-            </div>
-                
+          </div>
         </nav>
-    );
+    </div>
+  )
 };

@@ -20,9 +20,9 @@ export default function CreatePostForm({userId, profile}) {
     
     // to get specific data
     function extractData(arr, prop) {
-        const extractedValue = arr.map(item => item[prop]);
+        const extractedValue = arr.map(item => item[prop])
         return extractedValue;
-    };
+    }
 
     //username
     const profile_username = extractData(profile, 'username');
@@ -38,48 +38,47 @@ export default function CreatePostForm({userId, profile}) {
         
         let file;
         if (e.target.files) {
-            file = e.target.files[0];
-        };
+        file = e.target.files[0];
+        }
 
         const res = await SupaBaseDB
             .storage.from("post-pics").upload("public/" + file?.name, file);
         
-        setPostImg("https://brhqhwzkkolxuilfhwkx.supabase.co/storage/v1/object/public/post-pics/public/" + file.name, file)
+        setPostImg("https://brhqhwzkkolxuilfhwkx.supabase.co/storage/v1/object/public/post-pics/public/" + file.name,file)
         if (res.data) {
-            console.log(res.data);
+        console.log(res.data);
         } else if (res.error) {
-            console.log(res.error['message']);
-            setErrMsg(res.error['message']);
-        };
+        console.log(res.error['message']);
+        }
+        
+    }
 
-    };
-
-    // create post
     const createPost = async (event) => {
         event.preventDefault();
 
-        const res = await SupaBaseDB
-            .from("posts")
-            .insert([
-                {
-                    user_id: id,
-                    post_pic: postImg,
-                    post_text: postText,
-                    likes: likes,
-                    caption: caption,
-                    user_username: username,
-                    user_profilepic: profilePic,
-                }
-            ]);
+            const res = await SupaBaseDB
+                .from("posts")
+                .insert([
+                    {
+                        user_id: id,
+                        post_pic: postImg,
+                        post_text: postText,
+                        likes: likes,
+                        caption: caption,
+                        user_username: username,
+                        user_profilepic: profilePic,
+                    }
+                ]);
             
-        if (res.error) {
-            setErrMsg(JSON.stringify(res.error['message']))
-        } else {
-            setErrMsg('');
-            router.push('/home')
-        };
-      
-    };
+            if (res.error) {
+                setErrMsg(JSON.stringify(res.error['message']))
+            } else {
+                setErrMsg('');
+                router.push('/home')
+            }
+    
+        
+    }
 
     return (
         <div className={styles.container}>
@@ -125,7 +124,6 @@ export default function CreatePostForm({userId, profile}) {
                     </button>
                 </div>
             </form>
-            {/* for cool background effect */}
             <div className={styles.backgroundFeature}>
                 1
             </div>

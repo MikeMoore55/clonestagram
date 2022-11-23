@@ -12,8 +12,8 @@ export default function CreatePost({data, account}) {
     return extractedValue;
   };
 
-  const cookieId = extractId(id, 'user');
-  const userId = cookieId.toString();
+  const cookieId = extractId(id, 'user')
+  const userId = cookieId.toString()
 
   function getUserProfile(arr, id) {
         let accNr = 0;
@@ -30,12 +30,11 @@ export default function CreatePost({data, account}) {
   const profiles = getUserProfile(account, userId);
 
   return (
-
     <div>    
       <CreatePostForm userId={userId} profile={profiles} />
     </div>
-
   );
+  
 };
 
 export async function getServerSideProps({ req, res }) {
@@ -57,7 +56,7 @@ export async function getServerSideProps({ req, res }) {
   return {
     props: {
       data: data && data,
-      account: account,
+      account: account
     }
   };
 };

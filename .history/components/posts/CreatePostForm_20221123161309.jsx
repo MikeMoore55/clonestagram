@@ -78,6 +78,7 @@ export default function CreatePostForm({userId, profile}) {
             setErrMsg('');
             router.push('/home')
         };
+    
       
     };
 
@@ -125,7 +126,6 @@ export default function CreatePostForm({userId, profile}) {
                     </button>
                 </div>
             </form>
-            {/* for cool background effect */}
             <div className={styles.backgroundFeature}>
                 1
             </div>

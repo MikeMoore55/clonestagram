@@ -7,9 +7,9 @@ import { AiOutlineUser } from "react-icons/ai"; // personal profile icon
 import { BsFillDoorOpenFill } from "react-icons/bs"; // log put icon
 import styles from "../../styles/BottomNav.module.css"
 
-// we parse id here to be used for the routing
+
 export default function BottomNav({userId}) {
-    
+  
     const id = userId;
 
     return (

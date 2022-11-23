@@ -1,5 +1,5 @@
 import React from 'react';
-import { GrAdd } from "react-icons/gr"; // " + " icon
+import { GrAdd } from "react-icons/gr"; // + icon
 import Link from 'next/link';
 import styles from '../../styles/NewPostBtn.module.css'
 
