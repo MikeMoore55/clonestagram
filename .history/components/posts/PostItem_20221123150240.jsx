@@ -7,8 +7,8 @@ export default function PostItem({ posted }) {
     return (
         <div className={styles.container}>
             <div className={styles.profileSection}>
-                <img className={styles.profilePic} src={posted.user_profilepic}/>
-                <h3 className={styles.username}>{posted.user_username}</h3>
+                <img className={styles.profilePic} src={posted.user_profilepic}
+                <h3>{posted.user_username}</h3>
             </div>
             <div className={styles.postContent}>
                 {/* the post can either be a text format or just a plain image  */}

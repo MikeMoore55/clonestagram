@@ -11,23 +11,15 @@
 .profileSection {
     position: relative;
     border-bottom: black 1px solid;
-    padding: 1% 5% 1% 5%;
+    padding: 1% 1% 1% 1%;
     display: grid;
     grid-template-columns: 20% 80%;
 }
 
 .profilePic {
     position: relative;
-    width: 90%;
-    height: 45px;
-    border-radius: 50%;
-    margin: 1% 5% 2% 5%;
-}
-
-.username {
-    position: relative;
-    margin-left: 5%;
-    margin: 3% 1% 3% 5%;
+    width: 100%;
+    height: 50px;
 }
 
 .postImg {
@@ -39,7 +31,7 @@
 
 .caption {
     position: relative;
-    margin: 2% 5% 3% 7%;
+    margin: 2% 5% 3% 5%;
     font-size: 1.1em;
 }
 
