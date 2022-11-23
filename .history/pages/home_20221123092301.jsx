@@ -5,10 +5,11 @@ import Link from 'next/link';
 import BottomNav from '../components/Layout/BottomNav';
 import NewPostBtn from '../components/Layout/NewPostBtn';
 import CreatePostForm from '../components/posts/CreatePostForm';
-import DisplayPosts from '../components/posts/DisplayPosts';
 
 export default function Home({ data, posts }) {
     
+    console.log(posts)
+
     const id = [data];
     function extractId(arr, prop) {
         const extractedValue = arr.map(item => item[prop])
@@ -23,7 +24,7 @@ export default function Home({ data, posts }) {
     return (
         <div>
             <div>
-                <DisplayPosts post={posts} />
+
             </div>
             
             <BottomNav userId={userId}/>

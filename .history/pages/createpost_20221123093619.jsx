@@ -20,7 +20,6 @@ export default function CreatePost({data}) {
       <CreatePostForm userId={userId} />
     </div>
   );
-  
 };
 
 export async function getServerSideProps({ req, res }) {

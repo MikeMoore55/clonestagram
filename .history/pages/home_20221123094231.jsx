@@ -23,7 +23,7 @@ export default function Home({ data, posts }) {
     return (
         <div>
             <div>
-                <DisplayPosts post={posts} />
+                <DisplayPosts posts={posts} />
             </div>
             
             <BottomNav userId={userId}/>

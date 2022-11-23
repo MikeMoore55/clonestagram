@@ -4,23 +4,22 @@ import { parseCookies } from '../helpers/cookie';
 
 export default function CreatePost({data}) {
   
-  const id = [data];
-  function extractId(arr, prop) {
-      const extractedValue = arr.map(item => item[prop])
-      return extractedValue;
-  }
+    const id = [data];
+    function extractId(arr, prop) {
+        const extractedValue = arr.map(item => item[prop])
+        return extractedValue;
+    }
 
-  const cookieId = extractId(id, 'user')
+    const cookieId = extractId(id, 'user')
 
-  const userId = cookieId.toString()
-  console.log(userId);
+    const userId = cookieId.toString()
+    console.log(userId);
 
   return (
     <div>    
       <CreatePostForm userId={userId} />
     </div>
   );
-  
 };
 
 export async function getServerSideProps({ req, res }) {

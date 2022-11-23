@@ -5,7 +5,6 @@ import Link from 'next/link';
 import BottomNav from '../components/Layout/BottomNav';
 import NewPostBtn from '../components/Layout/NewPostBtn';
 import CreatePostForm from '../components/posts/CreatePostForm';
-import DisplayPosts from '../components/posts/DisplayPosts';
 
 export default function Home({ data, posts }) {
     
@@ -23,7 +22,7 @@ export default function Home({ data, posts }) {
     return (
         <div>
             <div>
-                <DisplayPosts post={posts} />
+
             </div>
             
             <BottomNav userId={userId}/>

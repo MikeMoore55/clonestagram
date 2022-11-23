@@ -9,6 +9,8 @@ import DisplayPosts from '../components/posts/DisplayPosts';
 
 export default function Home({ data, posts }) {
     
+    console.log(posts);
+
     const id = [data];
     function extractId(arr, prop) {
         const extractedValue = arr.map(item => item[prop])
@@ -23,7 +25,7 @@ export default function Home({ data, posts }) {
     return (
         <div>
             <div>
-                <DisplayPosts post={posts} />
+                <DisplayPosts posts={posts} />
             </div>
             
             <BottomNav userId={userId}/>
