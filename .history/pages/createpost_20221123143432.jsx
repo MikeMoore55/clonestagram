@@ -1,8 +1,6 @@
 import React from 'react';
 import CreatePostForm from '../components/posts/CreatePostForm';
 import { parseCookies } from '../helpers/cookie';
-import { SupaBaseDB } from '../utils/dbconnect';
-
 
 export default function CreatePost({data, account}) {
   
@@ -15,6 +13,8 @@ export default function CreatePost({data, account}) {
   const cookieId = extractId(id, 'user')
 
   const userId = cookieId.toString()
+
+  console.log(userId);
 
   function getUserProfile(arr, id) {
         let accNr = 0;
@@ -29,10 +29,11 @@ export default function CreatePost({data, account}) {
 
     }
 
-    const profiles = getUserProfile(account, userId)
+    const postProfiles = getUserProfile(account, userId)
+     console.log(postProfiles)
   return (
     <div>    
-      <CreatePostForm userId={userId} profile={profiles} />
+      <CreatePostForm userId={userId} />
     </div>
   );
   

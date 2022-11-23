@@ -7,7 +7,7 @@ import NewPostBtn from '../components/Layout/NewPostBtn';
 import CreatePostForm from '../components/posts/CreatePostForm';
 import DisplayPosts from '../components/posts/DisplayPosts';
 
-export default function Home({ data, posts }) {
+export default function Home({ data, posts, account }) {
     
     const id = [data];
     function extractId(arr, prop) {
@@ -22,7 +22,7 @@ export default function Home({ data, posts }) {
     return (
         <div>
             <div>
-                <DisplayPosts post={posts} />
+                <DisplayPosts post={posts} accounts={account} />
             </div>
             
             <BottomNav userId={userId}/>

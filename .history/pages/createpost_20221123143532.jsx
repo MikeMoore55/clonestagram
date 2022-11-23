@@ -16,6 +16,8 @@ export default function CreatePost({data, account}) {
 
   const userId = cookieId.toString()
 
+  console.log(userId);
+
   function getUserProfile(arr, id) {
         let accNr = 0;
     for (var i = 0; i < arr.length; i++) {
@@ -29,10 +31,11 @@ export default function CreatePost({data, account}) {
 
     }
 
-    const profiles = getUserProfile(account, userId)
+    const postProfiles = getUserProfile(account, userId)
+     console.log(postProfiles)
   return (
     <div>    
-      <CreatePostForm userId={userId} profile={profiles} />
+      <CreatePostForm userId={userId} />
     </div>
   );
   

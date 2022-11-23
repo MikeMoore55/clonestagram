@@ -88,7 +88,7 @@ export default function CreatePostForm({userId, profile}) {
                     onChange={(e)=>setPostText(e.target.value)}
                     placeholder='say something' />
                 <p className={styles.text}>or</p>
-                <label for='fileInput' className={styles.ImageLabel}>
+                <label className={styles.ImageLabel}>
                     
                     <span className={styles.imageIcon}>
                         <AiOutlinePicture/>

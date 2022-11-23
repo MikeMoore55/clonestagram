@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { AiOutlinePicture } from "react-icons/ai";
 import styles from '../../styles/CreatePostForm.module.css';
 
-export default function CreatePostForm({userId, profile}) {
+export default function CreatePostForm({userId}) {
 
     const router = useRouter('');
 
@@ -17,16 +17,7 @@ export default function CreatePostForm({userId, profile}) {
     const [errMsg, setErrMsg] = useState('');
     const likes = 0; // set likes to 0 by default
     
-    function extractData(arr, prop) {
-        const extractedValue = arr.map(item => item[prop])
-        return extractedValue;
-    }
 
-    const profile_username = extractData(profile, 'username');
-    const username = profile_username.toString();
-
-    const profile_profilePicture = extractData(profile, 'profile_pic');
-    const profilePic = profile_profilePicture.toString();
 
     const handleImageUpload = async (e) => {
         e.preventDefault();
@@ -60,8 +51,6 @@ export default function CreatePostForm({userId, profile}) {
                         post_text: postText,
                         likes: likes,
                         caption: caption,
-                        user_username: username,
-                        user_profilepic: profilePic,
                     }
                 ]);
             

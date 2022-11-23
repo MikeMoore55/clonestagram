@@ -28,6 +28,9 @@ export default function CreatePostForm({userId, profile}) {
     const profile_profilePicture = extractData(profile, 'profile_pic');
     const profilePic = profile_profilePicture.toString();
 
+    console.log(username)
+    console.log(profilePic)
+
     const handleImageUpload = async (e) => {
         e.preventDefault();
         
@@ -60,8 +63,6 @@ export default function CreatePostForm({userId, profile}) {
                         post_text: postText,
                         likes: likes,
                         caption: caption,
-                        user_username: username,
-                        user_profilepic: profilePic,
                     }
                 ]);
             

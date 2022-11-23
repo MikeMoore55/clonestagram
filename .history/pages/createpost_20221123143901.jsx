@@ -16,6 +16,8 @@ export default function CreatePost({data, account}) {
 
   const userId = cookieId.toString()
 
+  console.log(userId);
+
   function getUserProfile(arr, id) {
         let accNr = 0;
     for (var i = 0; i < arr.length; i++) {

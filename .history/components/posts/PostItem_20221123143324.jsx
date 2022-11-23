@@ -7,7 +7,11 @@ export default function PostItem({ posted }) {
     return (
         <div className={styles.container}>
             <div className={styles.profileSection}>
-                <h3>{posted.user_username}</h3>
+                {postProfiles.map(profile => {
+                    <div key={profile.account_id}>
+                        <h4>{profile.username}</h4>
+                    </div>
+                })}
             </div>
             <div className={styles.postContent}>
                 {/* the post can either be a text format or just a plain image  */}

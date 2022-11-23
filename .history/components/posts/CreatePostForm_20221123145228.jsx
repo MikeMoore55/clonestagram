@@ -61,7 +61,7 @@ export default function CreatePostForm({userId, profile}) {
                         likes: likes,
                         caption: caption,
                         user_username: username,
-                        user_profilepic: profilePic,
+                        user_profilepic: profilePic
                     }
                 ]);
             
