@@ -4,7 +4,7 @@ import { parseCookies } from '../helpers/cookie';
 import EditAccountForm from '../components/account/EditAccount';
 
 export default function EditAccount({ data, accounts }) {
-  const id = [data];
+   const id = [data];
   function extractId(arr, prop) {
     const extractedValue = arr.map(item => item[prop])
     return extractedValue;
@@ -25,11 +25,11 @@ export default function EditAccount({ data, accounts }) {
     return profileAccount;
   };
 
-  const profiles = getUserProfile(accounts, userId);
+  const profiles = getUserProfile(account, userId);
 
   return (
     <div>
-      <EditAccountForm account={profiles}/>
+        <EditAccountForm/>
     </div>
   )
 }

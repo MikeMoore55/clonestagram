@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import Link from 'next/link';
-import Router,{useRouter} from 'next/router';
 import { SupaBaseDB } from '../../utils/dbconnect';
 import { AiOutlinePicture } from "react-icons/ai";
 import styles from '../../styles/EditAccount.module.css';
@@ -8,38 +7,33 @@ import styles from '../../styles/EditAccount.module.css';
 
 export default function EditAccountForm({ account }) {
   console.log(account);
-  const router = useRouter();
 
   const profile = account;
 
-  // to get specific data
+  const [username, setUsername] = useState('');
+  const [bio, setBio] = useState('');
+  const [dob, setDOB] = useState('');
+  const [profileImg, setProfileImg] = useState('');
+  const [errMsg, setErrMsg] = useState('');
+
+// to get specific data
   function extractData(arr, prop) {
       const extractedValue = arr.map(item => item[prop]);
       return extractedValue;
   };
 
-  // original data
+  //username
   const profile_username = extractData(profile, 'username');
   const original_username = profile_username.toString();
 
   const profile_id = extractData(profile, 'account_id');
-  const userId = profile_id.toString();
-
+  const userId = profile_username.toString();
+  
   const profile_bio = extractData(profile, 'bio');
-  const original_bio = profile_bio.toString();
+  const original_bio = profile_username.toString();
   
   const profile_dob = extractData(profile, 'birth_date');
-  const original_dob = profile_dob.toString();
-  
-  const profile_pic = extractData(profile, 'profile_pic');
-  const original_pic = profile_pic.toString();
-  
-  
-  const [username, setUsername] = useState(original_username);
-  const [bio, setBio] = useState(original_bio);
-  const [dob, setDOB] = useState(original_dob);
-  const [profileImg, setProfileImg] = useState(original_pic);
-  const [errMsg, setErrMsg] = useState('');
+    const original_dob = profile_username.toString();
   
   const handleImageUpload = async (e) => {
         e.preventDefault();
@@ -52,7 +46,7 @@ export default function EditAccountForm({ account }) {
         const res = await SupaBaseDB
             .storage.from("profile-pics").upload("public/" + file?.name, file);
         
-        setProfileImg("https://brhqhwzkkolxuilfhwkx.supabase.co/storage/v1/object/public/profile-pics/public/" + file.name, file)
+        setProfileImg("https://brhqhwzkkolxuilfhwkx.supabase.co/storage/v1/object/public/profile-pics/" + file.name, file)
         if (res.data) {
             console.log(res.data);
         } else if (res.error) {
@@ -62,46 +56,22 @@ export default function EditAccountForm({ account }) {
 
     };
 
-  const updateAccount = async (e) => {
-    e.preventDefault();
-
-    const updatedAcc = await SupaBaseDB
+  const updateAccount = async () => {
+    const updated = await SupaBaseDB
       .from('account')
       .update({
-        username: username,
-        bio: bio,
-        profile_pic: profileImg,
-        birth_date: dob
-      })
-      .eq('account_id', userId)
-    
-    const updatedPost = await SupaBaseDB
-      .from('posts')
-      .update({
-        user_username: username,
-        user_profilepic: profileImg
-      })
-    .eq('user_id', userId )
-  
-    if (updatedAcc.error) {
-      setErrMsg(JSON.stringify(updatedAcc.error['message']));
-      console.log(updatedAcc.error['message']);
-    }
-    else if (updatedPost.error) {
-      setErrMsg(JSON.stringify(updatedPost.error['message']));
-      console.log(updatedPost.error['message']);
-    }
-    else {
-      setErrMsg("account successfully updated!")
-      console.log('success')
-      router.push("/home");
       
-    }
+      })
+    .eq('account_id', userId )
+    /* const { error } = await supabase
+  .from('countries')
+  .update({ name: 'Australia' })
+  .eq('id', 1) */
   }
 
   return (
     <div className={styles.container}>
-      <form onSubmit={(e) => {updateAccount(e)}} className={styles.signUpForm}>
+      <form onSubmit={updateAccount} className={styles.signUpForm}>
                 
         <h2 className={styles.heading}>
           Edit Your Account
@@ -117,7 +87,7 @@ export default function EditAccountForm({ account }) {
               className={styles.input}
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-             />
+              placeholder='username' />
           </div>
           <div>
             <label className={styles.label}>
@@ -128,7 +98,7 @@ export default function EditAccountForm({ account }) {
               className={styles.input}
               value={bio}
               onChange={(e) => setBio(e.target.value)}
-            />
+              placeholder='' />
           </div>
 
           <div>
@@ -140,7 +110,7 @@ export default function EditAccountForm({ account }) {
             className={styles.input}
             value={dob} 
             onChange={(e) => setDOB(e.target.value)} 
-            />
+            placeholder=''/>
           </div>
         </div>
 
@@ -172,12 +142,6 @@ export default function EditAccountForm({ account }) {
         <button type='submit' className={styles.btn}>
           Update
         </button>
-
-        <p>
-          <Link href={'/home'}>
-            Cancel
-          </Link>
-        </p>
 
         <p className={styles.errMsg}>
           {errMsg}

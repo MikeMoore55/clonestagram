@@ -38,7 +38,7 @@ export default function EditAccountForm({ account }) {
   const [username, setUsername] = useState(original_username);
   const [bio, setBio] = useState(original_bio);
   const [dob, setDOB] = useState(original_dob);
-  const [profileImg, setProfileImg] = useState(original_pic);
+  const [profileImg, setProfileImg] = useState('');
   const [errMsg, setErrMsg] = useState('');
   
   const handleImageUpload = async (e) => {
@@ -65,7 +65,7 @@ export default function EditAccountForm({ account }) {
   const updateAccount = async (e) => {
     e.preventDefault();
 
-    const updatedAcc = await SupaBaseDB
+    const updated = await SupaBaseDB
       .from('account')
       .update({
         username: username,
@@ -73,23 +73,11 @@ export default function EditAccountForm({ account }) {
         profile_pic: profileImg,
         birth_date: dob
       })
-      .eq('account_id', userId)
-    
-    const updatedPost = await SupaBaseDB
-      .from('posts')
-      .update({
-        user_username: username,
-        user_profilepic: profileImg
-      })
-    .eq('user_id', userId )
+    .eq('account_id', userId )
   
-    if (updatedAcc.error) {
-      setErrMsg(JSON.stringify(updatedAcc.error['message']));
-      console.log(updatedAcc.error['message']);
-    }
-    else if (updatedPost.error) {
-      setErrMsg(JSON.stringify(updatedPost.error['message']));
-      console.log(updatedPost.error['message']);
+    if (updated.error) {
+      setErrMsg(JSON.stringify(updated.error['message']));
+      console.log(updated.error['message']);
     }
     else {
       setErrMsg("account successfully updated!")

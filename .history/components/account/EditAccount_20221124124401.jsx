@@ -87,10 +87,6 @@ export default function EditAccountForm({ account }) {
       setErrMsg(JSON.stringify(updatedAcc.error['message']));
       console.log(updatedAcc.error['message']);
     }
-    else if (updatedPost.error) {
-      setErrMsg(JSON.stringify(updatedPost.error['message']));
-      console.log(updatedPost.error['message']);
-    }
     else {
       setErrMsg("account successfully updated!")
       console.log('success')

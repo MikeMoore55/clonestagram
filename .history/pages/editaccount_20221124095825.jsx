@@ -29,7 +29,7 @@ export default function EditAccount({ data, accounts }) {
 
   return (
     <div>
-      <EditAccountForm account={profiles}/>
+        <EditAccountForm/>
     </div>
   )
 }

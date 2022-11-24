@@ -3,33 +3,10 @@ import { SupaBaseDB } from '../utils/dbconnect';
 import { parseCookies } from '../helpers/cookie';
 import EditAccountForm from '../components/account/EditAccount';
 
-export default function EditAccount({ data, accounts }) {
-  const id = [data];
-  function extractId(arr, prop) {
-    const extractedValue = arr.map(item => item[prop])
-    return extractedValue;
-  };
-
-  const cookieId = extractId(id, 'user');
-  const userId = cookieId.toString();
-
-  function getUserProfile(arr, id) {
-        let accNr = 0;
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i].account_id == id) {
-        accNr = i;
-        break;
-      };
-    };
-    const profileAccount = [arr[accNr]];
-    return profileAccount;
-  };
-
-  const profiles = getUserProfile(accounts, userId);
-
+export default function EditAccount() {
   return (
     <div>
-      <EditAccountForm account={profiles}/>
+        <EditAccountForm/>
     </div>
   )
 }
