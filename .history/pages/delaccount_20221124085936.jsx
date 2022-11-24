@@ -51,12 +51,10 @@ export default function DelAccount( { data } ) {
     return (
         <div className={styles.container}>
             <div className={styles.block}>
-                <h3 className={styles.heading1}>You Are Leaving Us So Soon😢...</h3>
-                <p className={styles.text}>Are you sure you want to delete your Account?</p>
-                <div className={styles.btnContainer}>
-                    <button className={styles.confirm} onClick={() => delAccount()}>Confirm</button>
-                    <button className={styles.cancel}><Link href={'/home'}>Cancel</Link></button>
-                </div>
+                <h3 className={styles.heading1}>It is so sad to see you go 😢</h3>
+                <h4 className={styles.heading2}>Are you sure you want to delete you Clonestagram Account?</h4>
+                <button className={styles.confirm} onClick={() => delAccount()}>Confirm</button>
+                <button className={styles.cancel}><Link href={'/home'}>Cancel</Link></button>
             </div>
             {/* for a cool background effect */}
             <div className={styles.backgroundFeature}>

@@ -3,8 +3,7 @@ import Link from 'next/link';
 import Router,{useRouter} from 'next/router';
 import { SupaBaseDB } from '../utils/dbconnect';
 import { parseCookies } from '../helpers/cookie';
-import styles from '../styles/DelAccount.module.css';
-import Footer from '../components/Layout/Footer'
+import styles from '../styles/DelAccount.module.css'
 
 export default function DelAccount( { data } ) {
     const router = useRouter();
@@ -49,20 +48,10 @@ export default function DelAccount( { data } ) {
     }
 
     return (
-        <div className={styles.container}>
-            <div className={styles.block}>
-                <h3 className={styles.heading1}>You Are Leaving Us So Soon😢...</h3>
-                <p className={styles.text}>Are you sure you want to delete your Account?</p>
-                <div className={styles.btnContainer}>
-                    <button className={styles.confirm} onClick={() => delAccount()}>Confirm</button>
-                    <button className={styles.cancel}><Link href={'/home'}>Cancel</Link></button>
-                </div>
-            </div>
-            {/* for a cool background effect */}
-            <div className={styles.backgroundFeature}>
-                1
-            </div>
-            <Footer/>
+        <div>
+            <h3>Are you sure you want to delete you Clonestagram Account?</h3>
+            <button onClick={() => delAccount()}>Confirm</button>
+            <button><Link href={'/home'}>Cancel</Link></button>
         </div>
     );
 };

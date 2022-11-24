@@ -52,7 +52,7 @@ export default function DelAccount( { data } ) {
         <div className={styles.container}>
             <div className={styles.block}>
                 <h3 className={styles.heading1}>You Are Leaving Us So Soon😢...</h3>
-                <p className={styles.text}>Are you sure you want to delete your Account?</p>
+                <h4 className={styles.heading2}>Are you sure you want to delete your Account?</h4>
                 <div className={styles.btnContainer}>
                     <button className={styles.confirm} onClick={() => delAccount()}>Confirm</button>
                     <button className={styles.cancel}><Link href={'/home'}>Cancel</Link></button>

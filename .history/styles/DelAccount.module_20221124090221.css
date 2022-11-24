@@ -1,0 +1,26 @@
+.container {
+    position: relative;
+    width: 100%;
+    padding-top: 20%;
+}
+
+.block {
+    position: relative;
+    width: 80%;
+    margin: 5% 5% 5% 5%;
+    text-align: center;
+}
+
+.backgroundFeature {
+    position: fixed;
+    color: transparent;
+    background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    right: 0%;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    opacity: 0.9;
+}

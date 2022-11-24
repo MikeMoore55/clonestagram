@@ -1,0 +1,68 @@
+.container {
+    position: relative;
+    width: 100%;
+    padding-top: 20%;
+}
+
+.block {
+    position: relative;
+    width: 80%;
+    margin: 10% 10% 5% 10%;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5% 5% 5% 5%;
+}
+
+.heading1 {
+    position: relative;
+    font-size: 1.5em;
+}
+
+.text {
+    position: relative;
+    font-size: 1.3em;
+}
+
+.btnContainer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.cancel {
+    position: relative;
+    width: 90%;
+    margin: 5%;
+    border: #8300f1 solid 2px;
+    color: #8300f1;
+    font-size: 1em;
+    font-weight: 400;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.confirm {
+    position: relative;
+    width: 90%;
+    margin: 5%;
+    background-color: #8300f1;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.backgroundFeature {
+    position: fixed;
+    color: transparent;
+    background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    right: 0%;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    opacity: 0.9;
+}
