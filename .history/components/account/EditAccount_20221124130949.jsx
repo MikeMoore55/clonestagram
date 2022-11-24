@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Router,{useRouter} from 'next/router';
 import { SupaBaseDB } from '../../utils/dbconnect';
 import { AiOutlinePicture } from "react-icons/ai";
-import Footer from '../Layout/Footer';
+import Footer from '../Layout/Footer'
 import styles from '../../styles/EditAccount.module.css';
 
 
@@ -150,8 +150,7 @@ export default function EditAccountForm({ account }) {
               Profile Image:
             </label>
             <br />
-          <br />
-          <br/>
+            <br/>
             
             <label for='fileInput' className={styles.ImageLabel}>
                     
@@ -193,8 +192,6 @@ export default function EditAccountForm({ account }) {
       <div className={styles.backgroundFeature}>
         1
       </div>
-
-      <Footer/>
       
     </div>
   );

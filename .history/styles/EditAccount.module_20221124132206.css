@@ -253,13 +253,13 @@
 
     .cancelBtn {
         width: 50%;
-        margin: 5% 45% 1% 5%;
+        margin: 5% 10% 1% 10%;
         font-size: 1em;
     }
 
     .updateBtn {
         width: 50%;
-        margin: 5% 5% 1% 45%;
+        margin: 5% 10% 1% 10%;
         font-size: 1em;
     }
 

@@ -150,8 +150,7 @@ export default function EditAccountForm({ account }) {
               Profile Image:
             </label>
             <br />
-          <br />
-          <br/>
+            <br/>
             
             <label for='fileInput' className={styles.ImageLabel}>
                     

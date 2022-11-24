@@ -150,8 +150,7 @@ export default function EditAccountForm({ account }) {
               Profile Image:
             </label>
             <br />
-          <br />
-          <br/>
+            <br/>
             
             <label for='fileInput' className={styles.ImageLabel}>
                     
@@ -194,7 +193,7 @@ export default function EditAccountForm({ account }) {
         1
       </div>
 
-      <Footer/>
+      <Footer
       
     </div>
   );
