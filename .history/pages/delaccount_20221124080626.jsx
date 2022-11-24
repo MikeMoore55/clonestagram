@@ -17,39 +17,29 @@ export default function DelAccount( { data } ) {
   
     console.log(userId);
 
-    const delAccount = async () => {
-        
-        // delete the account of user
-        const account = await SupaBaseDB
+    const delAccount = async (event) => {
+        event.preventDefault();
+        const { error } = await SupaBaseDB
             .from("account")
             .delete()
             .eq("account_id", userId);
         
-        // delete all the posts of user too
-        const posts = await SupaBaseDB
-            .from("posts")
-            .delete()
-            .eq("user_id", userId);
-        
-        if (account.error) {
-            console.log(account.error['message']);
-        }
-        else if (posts.error) {
-            console.log(posts.error["message"]);
+        if (error) {
+            console.log(error['message'])
         }
         else {
-            console.log('account deleted successfully');
+            console.log('account deleted successfully')
             router
                 .push({
-                    pathname: '/', // when successful take to the feed page
-                });
+                        pathname: '/', // when successful take to the feed page
+                    })
         }
     }
 
     return (
         <div>
             <h3>Are you sure you want to delete you Clonestagram Account?</h3>
-            <button onClick={() => delAccount()}>Confirm</button>
+            <button onClick={(event) => delAccount}>Confirm</button>
             <button><Link href={'/home'}>Cancel</Link></button>
         </div>
     );

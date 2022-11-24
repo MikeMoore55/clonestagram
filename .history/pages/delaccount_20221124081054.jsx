@@ -19,13 +19,11 @@ export default function DelAccount( { data } ) {
 
     const delAccount = async () => {
         
-        // delete the account of user
         const account = await SupaBaseDB
             .from("account")
             .delete()
             .eq("account_id", userId);
         
-        // delete all the posts of user too
         const posts = await SupaBaseDB
             .from("posts")
             .delete()
@@ -41,8 +39,8 @@ export default function DelAccount( { data } ) {
             console.log('account deleted successfully');
             router
                 .push({
-                    pathname: '/', // when successful take to the feed page
-                });
+                        pathname: '/', // when successful take to the feed page
+                    })
         }
     }
 

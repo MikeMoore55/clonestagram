@@ -20,14 +20,7 @@ export default function AccountDisplay({ user }) {
                 
                 <div className={styles.accountOptions}>
                     <button>
-                        <Link href={'/delaccount'}>
-                            Delete Account
-                        </Link>
-                    </button>
-                    <button>
-                        <Link href={'/editaccount'}>
-                            Edit Account
-                        </Link>
+                        <
                     </button>
                 </div>
             </div>

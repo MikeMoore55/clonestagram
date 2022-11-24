@@ -1,11 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import Router,{useRouter} from 'next/router';
 import { SupaBaseDB } from '../utils/dbconnect';
-import {parseCookies} from '../helpers/cookie'
 
-export default function DelAccount( { data } ) {
-    const router = useRouter();
+export default function DelAccount() {
     const id = [data];
     function extractId(arr, prop) {
         const extractedValue = arr.map(item => item[prop]);
@@ -16,40 +13,24 @@ export default function DelAccount( { data } ) {
     const userId = cookieId.toString();
   
     console.log(userId);
-
+    
     const delAccount = async () => {
-        
-        // delete the account of user
-        const account = await SupaBaseDB
+        const { error } = await SupaBaseDB
             .from("account")
             .delete()
-            .eq("account_id", userId);
-        
-        // delete all the posts of user too
-        const posts = await SupaBaseDB
-            .from("posts")
-            .delete()
-            .eq("user_id", userId);
-        
-        if (account.error) {
-            console.log(account.error['message']);
-        }
-        else if (posts.error) {
-            console.log(posts.error["message"]);
-        }
-        else {
-            console.log('account deleted successfully');
-            router
-                .push({
-                    pathname: '/', // when successful take to the feed page
-                });
-        }
+        .eq("account_id", )
     }
+
+    /* const { error } = await supabase
+  .from('countries')
+  .delete()
+  .eq('id', 1) */
+
 
     return (
         <div>
             <h3>Are you sure you want to delete you Clonestagram Account?</h3>
-            <button onClick={() => delAccount()}>Confirm</button>
+            <button>Confirm</button>
             <button><Link href={'/home'}>Cancel</Link></button>
         </div>
     );

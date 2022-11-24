@@ -19,13 +19,11 @@ export default function DelAccount( { data } ) {
 
     const delAccount = async () => {
         
-        // delete the account of user
         const account = await SupaBaseDB
             .from("account")
             .delete()
             .eq("account_id", userId);
         
-        // delete all the posts of user too
         const posts = await SupaBaseDB
             .from("posts")
             .delete()

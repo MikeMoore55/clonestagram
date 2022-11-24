@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import styles from '../../styles/Account.module.css';
 
 export default function AccountDisplay({ user }) {
@@ -19,16 +18,7 @@ export default function AccountDisplay({ user }) {
                 </div>
                 
                 <div className={styles.accountOptions}>
-                    <button>
-                        <Link href={'/delaccount'}>
-                            Delete Account
-                        </Link>
-                    </button>
-                    <button>
-                        <Link href={'/editaccount'}>
-                            Edit Account
-                        </Link>
-                    </button>
+
                 </div>
             </div>
 
