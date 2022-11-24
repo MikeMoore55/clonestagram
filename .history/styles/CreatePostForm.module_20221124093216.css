@@ -198,10 +198,10 @@
     }
 
     .form {
-        width: 60%;
-        margin: 2% 20% 2% 20%;
+        width: 70%;
+        margin: 2% 15% 2% 15%;
         border-radius: 10px;
-        padding: 1% 1% 1.5% 1%;
+        padding: 1% 1% 2% 1%;
     }
 
     .heading {
@@ -244,7 +244,7 @@
         border: solid 1px black;
         border-radius: 10px;
         font-size: 1em;
-        padding: 0.5%;
+        padding: 1%;
     }
 
     .btnContainer {

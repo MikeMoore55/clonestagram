@@ -92,7 +92,7 @@ export default function CreatePostForm({userId, profile}) {
                     type='text'
                     value={postText}
                     onChange={(e)=>setPostText(e.target.value)}
-                    placeholder='Say Something' />
+                    placeholder='say something' />
                 <p className={styles.text}>or</p>
                 <label for='fileInput' className={styles.ImageLabel}>
                     

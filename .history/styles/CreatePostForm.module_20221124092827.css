@@ -192,16 +192,16 @@
 
 @media (min-width: 1000px) {
     .container {
-        padding-top: 6%;
+        padding-top: 7%;
         width: 100%;
         margin: 0%;
     }
 
     .form {
-        width: 60%;
-        margin: 2% 20% 2% 20%;
+        width: 80%;
+        margin: 2% 10% 2% 10%;
         border-radius: 10px;
-        padding: 1% 1% 1.5% 1%;
+        padding: 1%;
     }
 
     .heading {
@@ -213,8 +213,8 @@
         width: 70%;
         background-color: rgb(232, 231, 231);
         border: solid 1px black;
-        font-size: 1em;
-        padding: 0.5%;
+        font-size: 1.3em;
+        padding: 1%;
     }
 
     .text {
@@ -239,29 +239,28 @@
     }
 
     .captionInput {
-        margin: 7% 15% 1% 15%;
-        width: 70%;
+        margin: 7% 5% 5% 5%;
+        width: 90%;
         border: solid 1px black;
         border-radius: 10px;
-        font-size: 1em;
-        padding: 0.5%;
+        font-size: 1.3em;
+        padding: 1%;
     }
 
     .btnContainer {
-        margin-top: 2%;
         display: grid;
         grid-template-columns: 50% 50%;
     }
 
     .cancelBtn {
-        width: 70%;
-        margin: 2% 25% 2% 5%;
-        font-size: 1em;
+        width: 90%;
+        margin: 5%;
+        font-size: 1.3em;
     }
 
     .submitBtn {
-        width: 70%;
-        margin: 2% 5% 2% 25%;
-        font-size: 1em;
+        width: 90%;
+        margin: 5%;
+        font-size: 1.3em;
     }
 }
