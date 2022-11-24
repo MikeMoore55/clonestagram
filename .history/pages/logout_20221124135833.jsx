@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useCookies } from 'react-cookie';
-import Footer from '../components/Layout/Footer';
 import styles from '../styles/Logout.module.css';
 
 export default function Logout() {
@@ -29,18 +28,13 @@ export default function Logout() {
             <div className={styles.block}>
                 <h3 className={styles.heading1}>We hope to see you again soon</h3>
                 <p className={styles.text}>Are you sure you want to Logout?</p>
-                <div className={styles.btnContainer}>
-                    <button className={styles.confirm} onClick={(e) => { logout(e) }}>Confirm</button>
-                    <button className={styles.cancel}>
+                <div>
+                    <button onClick={(e) => { logout(e) }}>Confirm</button>
+                    <button>
                         <Link href={'/home'}>Cancel</Link>
                     </button>
                 </div>
             </div>
-            {/* for a cool background effect */}
-            <div className={styles.backgroundFeature}>
-                1
-            </div>
-            <Footer/>
         </div>
     );
 };

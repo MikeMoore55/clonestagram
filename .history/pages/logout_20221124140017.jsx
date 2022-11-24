@@ -36,11 +36,6 @@ export default function Logout() {
                     </button>
                 </div>
             </div>
-            {/* for a cool background effect */}
-            <div className={styles.backgroundFeature}>
-                1
-            </div>
-            <Footer/>
         </div>
     );
 };

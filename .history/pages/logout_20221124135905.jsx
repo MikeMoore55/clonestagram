@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useCookies } from 'react-cookie';
-import Footer from '../components/Layout/Footer';
 import styles from '../styles/Logout.module.css';
 
 export default function Logout() {
@@ -36,11 +35,6 @@ export default function Logout() {
                     </button>
                 </div>
             </div>
-            {/* for a cool background effect */}
-            <div className={styles.backgroundFeature}>
-                1
-            </div>
-            <Footer/>
         </div>
     );
 };
