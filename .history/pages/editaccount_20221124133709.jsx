@@ -16,13 +16,11 @@ export default function EditAccount({ data, accounts }) {
   const cookieId = extractId(id, 'user');
   const userId = cookieId.toString();
 
-  
-  /*
-    --- did the following here and not in "getServerSideProps" because i don't know how 
-    to get "extracted value" from cookie within function --- 
-  */
-  
   // get account where id = id 
+  /*
+    did the following here and not in "getServerSideProps" because i don't know how 
+    to get "extracted value" from cookie within function
+  */
   function getUserProfile(arr, id) {
         let accNr = 0;
     for (var i = 0; i < arr.length; i++) {

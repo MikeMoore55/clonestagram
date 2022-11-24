@@ -2,13 +2,13 @@ import React,{useState} from 'react';
 import Link from 'next/link';
 import Router,{useRouter} from 'next/router';
 import { SupaBaseDB } from '../../utils/dbconnect';
-import { AiOutlinePicture } from "react-icons/ai"; // upload pic icon
+import { AiOutlinePicture } from "react-icons/ai";
 import Footer from '../Layout/Footer';
 import styles from '../../styles/EditAccount.module.css';
 
 
 export default function EditAccountForm({ account }) {
-
+  console.log(account);
   const router = useRouter();
 
   const profile = account;
@@ -77,7 +77,7 @@ export default function EditAccountForm({ account }) {
         profile_pic: profileImg,
         birth_date: dob
       })
-      .eq('account_id', userId);
+      .eq('account_id', userId)
     
     // to update the posts "account info"
     const updatedPost = await SupaBaseDB
@@ -86,7 +86,7 @@ export default function EditAccountForm({ account }) {
         user_username: username,
         user_profilepic: profileImg
       })
-      .eq('user_id', userId);
+    .eq('user_id', userId )
   
     if (updatedAcc.error) {
       setErrMsg(JSON.stringify(updatedAcc.error['message']));
@@ -98,8 +98,8 @@ export default function EditAccountForm({ account }) {
     else {
       setErrMsg("account successfully updated!")
       router.push("/home");
-    };
-  };
+    }
+  }
 
   return (
     <div className={styles.container}>
