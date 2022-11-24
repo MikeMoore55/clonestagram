@@ -24,12 +24,12 @@
 
 @media (min-width: 1000px) {
     .postList {
-        padding-top: 6%;
-        padding-bottom: 6%;
+        padding-top: 7%;
+        padding-bottom: 20%;
     }
 
     .posts {
-        width: 40%;
-        margin: 0% 30% 0% 30%;
+        width: 60%;
+        margin: 0% 20% 0% 20%;
     }
 }

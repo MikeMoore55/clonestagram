@@ -16,7 +16,7 @@ export default function PostItem({ posted }) {
                 <img className={styles.postImg} src={posted.post_pic} />
                 
                 <div className={styles.captionContainer}>
-                    <p className={styles.captionUsername}>{posted.user_username}</p>
+                    <p className={styles.captionUsername}>{poster.user_username}</p>
                     <p className={styles.caption}>{posted.caption}</p>
                 </div>
                 

@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from '../../styles/PostItem.module.css';
 
-export default function PostItem({ posted }) {    
-    
+export default function PostItem({ posted }) {
     return (
         <div className={styles.container}>
 
@@ -12,13 +11,11 @@ export default function PostItem({ posted }) {
             </div>
 
             <div className={styles.postContent}>
+                <p className={styles.time}>{posted.created_at}</p>
                 {/* the post can either be a text format or just a plain image  */}
                 <img className={styles.postImg} src={posted.post_pic} />
                 
-                <div className={styles.captionContainer}>
-                    <p className={styles.captionUsername}>{posted.user_username}</p>
-                    <p className={styles.caption}>{posted.caption}</p>
-                </div>
+                <p className={styles.caption}>{posted.caption}</p>
                 
                 <p className={styles.postText}>{posted.post_text}</p>                
             </div>

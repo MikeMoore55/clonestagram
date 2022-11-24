@@ -53,41 +53,9 @@
     .icon {
         position: relative;
         font-size: 250%;
-        margin: 5% 20% 5% 20%;
+        margin: 10% 20% 5% 20%;
         color: black;
     }
 }
 
-@media (min-width: 1000px) {
-    .navContainer {
-        position: fixed;
-        width: 100%;
-        bottom: 0%;
-        left: 0%;
-        right: 0%;
-        display: grid;
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        background-color: white;
-        box-shadow: 0px -8px 6px -6px black;
-        z-index: 10;
-    }
-
-    .navLink {
-        position: relative;
-        width: 100%;
-    }
-
-    .navLink:active {
-        transform: scale(0.9);
-    }
-
-    .icon {
-        position: relative;
-        font-size: 2em;
-        text-align: center;
-        margin-top: 1%;
-        margin-bottom: 1%;
-        padding: 1% 1% 0% 1%;
-        color: black;
-    }
-}
+@media (min-width: 1000px) {}

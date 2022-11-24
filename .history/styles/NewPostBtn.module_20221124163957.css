@@ -5,15 +5,15 @@
 
 .addBtn {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 70%;
+    height: 90%;
     margin: 5% 10% 5% 10%;
+    background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
     border: none;
     border-radius: 50%;
     padding: 10% 1% 10% 1%;
     font-size: 1.2em;
     color: white;
-    background-color: white;
     font-weight: 800;
 }
 
@@ -29,11 +29,14 @@
 
     .addBtn {
         position: relative;
-        text-align: center;
+        width: 50%;
+        height: 90%;
+        margin: 5% 25% 5% 25%;
+        background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
         border: none;
         border-radius: 50%;
-        padding: 1% 1% 1% 1%;
-        font-size: 2em;
+        padding: 10% 1% 10% 1%;
+        font-size: 1.2em;
         color: white;
         font-weight: 800;
     }
@@ -43,25 +46,4 @@
     }
 }
 
-@media (min-width: 1000px) {
-    .btnContainer {
-        position: relative;
-        width: 100%;
-    }
-
-    .addBtn {
-        position: relative;
-        text-align: center;
-        border: none;
-        border-radius: 50%;
-        padding: 1% 1% 0% 1%;
-        margin: 0%;
-        font-size: 1.3em;
-        color: white;
-        font-weight: 800;
-    }
-
-    .addBtn:active {
-        transform: scale((0.9));
-    }
-}
+@media (min-width: 1000px) {}

@@ -29,11 +29,13 @@
 
     .addBtn {
         position: relative;
-        text-align: center;
+        width: 70px;
+        height: 70px;
+        margin: 1% 25% 1% 25%;
         border: none;
         border-radius: 50%;
-        padding: 1% 1% 1% 1%;
-        font-size: 2em;
+        padding: 4% 1% 4% 1%;
+        font-size: 1.2em;
         color: white;
         font-weight: 800;
     }
@@ -43,25 +45,4 @@
     }
 }
 
-@media (min-width: 1000px) {
-    .btnContainer {
-        position: relative;
-        width: 100%;
-    }
-
-    .addBtn {
-        position: relative;
-        text-align: center;
-        border: none;
-        border-radius: 50%;
-        padding: 1% 1% 0% 1%;
-        margin: 0%;
-        font-size: 1.3em;
-        color: white;
-        font-weight: 800;
-    }
-
-    .addBtn:active {
-        transform: scale((0.9));
-    }
-}
+@media (min-width: 1000px) {}

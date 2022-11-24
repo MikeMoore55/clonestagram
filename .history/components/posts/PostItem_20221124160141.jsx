@@ -1,7 +1,21 @@
 import React from 'react';
 import styles from '../../styles/PostItem.module.css';
 
-export default function PostItem({ posted }) {    
+export default function PostItem({ posted }) {
+
+    /* var dateObj = new Date();
+var month = dateObj.getUTCMonth() + 1; //months from 1-12
+var day = dateObj.getUTCDate();
+var year = dateObj.getUTCFullYear();
+
+newdate = year + "/" + month + "/" + day; */
+    
+    const dateVal = posted.created_at
+
+    const month = dateVal.getUTCMonth() + 1;
+    const day = dateVal.getUTCDate();
+
+    const date = day + "/" + month;
     
     return (
         <div className={styles.container}>
@@ -12,13 +26,11 @@ export default function PostItem({ posted }) {
             </div>
 
             <div className={styles.postContent}>
+                <p className={styles.time}>{posted.created_at}</p>
                 {/* the post can either be a text format or just a plain image  */}
                 <img className={styles.postImg} src={posted.post_pic} />
                 
-                <div className={styles.captionContainer}>
-                    <p className={styles.captionUsername}>{posted.user_username}</p>
-                    <p className={styles.caption}>{posted.caption}</p>
-                </div>
+                <p className={styles.caption}>{posted.caption}</p>
                 
                 <p className={styles.postText}>{posted.post_text}</p>                
             </div>

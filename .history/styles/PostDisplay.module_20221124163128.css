@@ -12,24 +12,16 @@
 
 @media (min-width: 490px) {
     .postList {
+        position: relative;
         padding-top: 13%;
         padding-bottom: 20%;
     }
 
     .posts {
+        position: relative;
         width: 60%;
         margin: 0% 20% 0% 20%;
     }
 }
 
-@media (min-width: 1000px) {
-    .postList {
-        padding-top: 6%;
-        padding-bottom: 6%;
-    }
-
-    .posts {
-        width: 40%;
-        margin: 0% 30% 0% 30%;
-    }
-}
+@media (min-width: 1000px) {}
