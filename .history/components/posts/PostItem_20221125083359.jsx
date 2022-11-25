@@ -2,12 +2,14 @@ import React from 'react';
 import styles from '../../styles/PostItem.module.css';
 
 export default function PostItem({ posted }) { 
+    
+    console.log(posted)
+    let postContent; 
 
-    // to make image related posts look different to text related post
-    let postContent;  // post type
     if (posted.post_text == '') {
         postContent = "image"
     }
+    
     if (posted.post_pic == '') {
         postContent = "text"
     }
@@ -27,19 +29,12 @@ export default function PostItem({ posted }) {
                         <img className={styles.postImg} src={posted.post_pic} />
                 
                         <div className={styles.captionContainer}>
-                            {posted.caption !== '' ?
-                                <div>
-                                    <p className={styles.captionUsername}>{posted.user_username}</p>
-                                    <p className={styles.caption}>{posted.caption}</p>
-                                </div> :
-                                <div>
-                                    <p className={styles.blank}>1</p>
-                                </div>}
-                            
+                            <p className={styles.captionUsername}>{posted.user_username}</p>
+                            <p className={styles.caption}>{posted.caption}</p>
                         </div>
                     </div> :
                     <div>
-                        <p className={styles.postText}>{posted.post_text}</p>
+                        <p className={styles.postText}>{posted.post_text}</p>                
                     </div>
                 }
 

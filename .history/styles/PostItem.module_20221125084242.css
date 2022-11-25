@@ -4,12 +4,14 @@
     width: 100%;
     padding-top: 2%;
     padding-bottom: 2%;
+    border-bottom: black 2px solid;
     box-shadow: 0 8px 6px -6px black;
     background-color: white;
 }
 
 .profileSection {
     position: relative;
+    border-bottom: black 1px solid;
     padding: 1% 2% 1% 2%;
     display: grid;
     grid-template-columns: 20% 80%;
@@ -89,17 +91,21 @@
         width: 100%;
         padding-top: 2%;
         padding-bottom: 2%;
+        border-bottom: black 2px solid;
         box-shadow: 0 8px 6px -6px black;
         background-color: white;
     }
 
     .profileSection {
+        position: relative;
+        border-bottom: black 1px solid;
         padding: 1% 2% 1% 2%;
         display: grid;
         grid-template-columns: 20% 80%;
     }
 
     .profilePic {
+        position: relative;
         width: 80%;
         height: 70px;
         border-radius: 50%;
@@ -107,18 +113,21 @@
     }
 
     .username {
+        position: relative;
         margin-left: 5%;
         margin: 3% 1% 3% 5%;
         font-size: 1.7em;
     }
 
     .postImg {
+        position: relative;
         width: 100%;
         height: 400px;
         margin: 0% 0% 0% 0%;
     }
 
     .captionContainer {
+        position: relative;
         width: 100%;
         padding: 0% 2% 0% 2%;
         margin: 1% 0% 1% 0%;
@@ -126,27 +135,27 @@
     }
 
     .captionUsername {
+        position: relative;
         font-size: 1.5em;
         font-weight: 600;
         margin: 0% 1% 0% 1%;
     }
 
     .caption {
+        position: relative;
         margin: 0% 1% 0% 1%;
         font-size: 1.5em;
     }
 
-    .postText {
-        font-size: 1.8em;
-    }
-
     .postInteraction {
+        position: relative;
         margin: 2% 5% 2% 5%;
         display: grid;
         grid-template-columns: 50% 50%;
     }
 
     .comments {
+        position: relative;
         text-align: end;
     }
 }
@@ -157,16 +166,21 @@
         width: 100%;
         padding-top: 2%;
         padding-bottom: 2%;
+        border-bottom: black 2px solid;
         box-shadow: 0 8px 6px -6px black;
+        background-color: white;
     }
 
     .profileSection {
+        position: relative;
+        border-bottom: black 1px solid;
         padding: 1% 2% 1% 2%;
         display: grid;
         grid-template-columns: 20% 80%;
     }
 
     .profilePic {
+        position: relative;
         width: 70%;
         height: 55px;
         border-radius: 50%;
@@ -174,22 +188,21 @@
     }
 
     .username {
+        position: relative;
         margin-left: 5%;
         margin: 4% 1% 3% 1%;
         font-size: 1.2em;
     }
 
     .postImg {
+        position: relative;
         width: 100%;
         height: 300px;
         margin: 0% 0% 0% 0%;
     }
 
-    .postText {
-        font-size: 1.2em;
-    }
-
     .captionContainer {
+        position: relative;
         width: 100%;
         padding: 0% 2% 0% 2%;
         margin: 1% 0% 1% 0%;
@@ -197,23 +210,27 @@
     }
 
     .captionUsername {
+        position: relative;
         font-size: 1.1em;
         font-weight: 600;
         margin: 0% 1% 0% 1%;
     }
 
     .caption {
+        position: relative;
         margin: 0% 1% 0% 1%;
         font-size: 1.1em;
     }
 
     .postInteraction {
+        position: relative;
         margin: 2% 5% 2% 5%;
         display: grid;
         grid-template-columns: 50% 50%;
     }
 
     .comments {
+        position: relative;
         text-align: end;
     }
 }

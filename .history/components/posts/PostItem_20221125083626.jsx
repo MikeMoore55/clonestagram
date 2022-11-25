@@ -2,12 +2,14 @@ import React from 'react';
 import styles from '../../styles/PostItem.module.css';
 
 export default function PostItem({ posted }) { 
+    
+    console.log(posted)
+    let postContent; 
 
-    // to make image related posts look different to text related post
-    let postContent;  // post type
     if (posted.post_text == '') {
         postContent = "image"
     }
+    
     if (posted.post_pic == '') {
         postContent = "text"
     }
