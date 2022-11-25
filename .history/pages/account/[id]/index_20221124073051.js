@@ -2,10 +2,8 @@ import React from 'react';
 import { SupaBaseDB } from '../../../utils/dbconnect';
 import AccountDisplay from '../../../components/account/AccountDisplay';
 import BottomNav from '../../../components/Layout/BottomNav';
-import UserPostsList from '../../../components/posts/UserPostsList';
 
-export default function Account({ account, posts }) {
-
+export default function Account({ account }) {
 
     return (
         <div>
@@ -13,7 +11,6 @@ export default function Account({ account, posts }) {
                 account.map(user =>
                     <div key={user.account_id}>
                         <AccountDisplay user={user} />
-                        <UserPostsList posts={posts} />
                         <BottomNav userId={user.account_id} />
                     </div>
                 )
@@ -24,23 +21,15 @@ export default function Account({ account, posts }) {
 
 export const getStaticProps = async (context) => {
 
-    const accounts = await SupaBaseDB
+    const res = await SupaBaseDB
         .from("account")
         .select('*')
         .eq('account_id', context.params.id)
-    const account = accounts.data;
-
-    const posts = await SupaBaseDB
-        .from("posts")
-        .select('*')
-        .eq('user_id', context.params.id)
-
-    const userPosts = posts.data
+    const account = res.data;
 
     return {
         props: {
-            account: account,
-            posts: userPosts,
+            account: account
         }
     };
 

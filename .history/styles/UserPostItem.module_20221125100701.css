@@ -1,0 +1,57 @@
+.container {
+    position: relative;
+    width: 100%;
+    border: solid black 1px;
+    margin: 0%;
+    background-image: linear-gradient(to bottom, #212121, #292829, #303030, #393838, #414040);
+}
+
+.postedContent {
+    position: relative;
+}
+
+.postImg {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin: 0%;
+}
+
+.text {
+    position: relative;
+    background-color: rgb(245, 245, 245);
+    padding: 0%;
+    margin: 0%;
+}
+
+.postText {
+    position: relative;
+    width: 100%;
+    font-weight: 500;
+    background-color: rgb(245, 245, 245);
+    padding: 7%;
+    margin: 0%;
+    height: 150px;
+}
+
+.postActions {
+    position: relative;
+    height: 20%;
+    margin: -20% 0% 0% 0%;
+}
+
+.delBtn {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin: 0%;
+    background-color: transparent;
+    border: none
+}
+
+.editBtn {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin: 0%;
+}

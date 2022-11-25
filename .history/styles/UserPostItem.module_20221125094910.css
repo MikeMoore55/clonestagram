@@ -1,0 +1,26 @@
+.container {
+    position: relative;
+    width: 100%;
+    border: solid black 1px;
+}
+
+.postedContent {
+    position: relative;
+}
+
+.postImg {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin: 0%;
+}
+
+.postText {
+    position: relative;
+    width: 100%;
+    font-weight: 500;
+    background-color: rgb(245, 245, 245);
+    padding: 7%;
+    margin: 0%;
+    max-height: 150px;
+}
