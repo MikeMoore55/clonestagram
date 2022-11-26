@@ -1,42 +1,28 @@
-import React,{useState} from 'react';
-import { SupaBaseDB } from '../../utils/dbconnect';
-import Link from 'next/link';
-import styles from '../../styles/UserPostItem.module.css';
+import React from 'react'
+import { SupaBaseDB } from '../../../utils/dbconnect';
+import styles from '../../../styles/Post.module.css';
 
-export default function UserPostItem({ posted }) {
+export default function Posts({ posts }) {
 
     let postContent;  // post type
+    let posted;
+    posts.map(post => posted = post);
+
+    console.log(posted)
+
     if (posted.post_text == '') {
         postContent = "image"
     }
     if (posted.post_pic == '') {
         postContent = "text"
     }
-    
-    const [delMsg, setDelMsg] = useState('')
-
-    const delPost = async (id) => {
-       const posts = await SupaBaseDB
-            .from("posts")
-            .delete()
-            .eq("post_id", id);
-        
-        if (posts.error) {
-            setDelMsg(JSON.stringify(posts.error['message']));
-        }
-        else {
-            setDelMsg("posted deleted successfully");
-        }
-    }
-
-    /* const EditPost = () => {
-        
-    } */
-
 
     return (
-        <div className={styles.container}>
-            <Link href={'/posts[id]'} as={`/posts/${posted.post_id}`}>
+        <div>
+            <br />
+            <br />
+            <br />
+            <div>
                 <div className={styles.postContent}>
                     {/* the post can either be a text format or just a plain image  */}
                     {postContent == "image" ?
@@ -56,7 +42,43 @@ export default function UserPostItem({ posted }) {
                         </div>
                     }
                 </div>
-            </Link>
+            </div>
         </div>
     );
 };
+
+
+export const getStaticProps = async (context) => {
+
+    const posts = await SupaBaseDB
+        .from("posts")
+        .select('*')
+        .eq('post_id', context.params.id)
+    const post = posts.data;
+
+    return {
+        props: {
+            posts: post,
+        }
+    };
+
+};
+
+export const getStaticPaths = async () => {
+
+    const res = await SupaBaseDB
+        .from("posts")
+        .select('*')
+
+    const post = res.data;
+
+    const ids = post.map(post => post.post_id);
+
+    const paths = ids.map(id => ({ params: { id: id.toString() } }));
+
+    return {
+        paths: paths,
+        fallback: false
+    };
+
+}
