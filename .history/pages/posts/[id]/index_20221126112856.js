@@ -20,7 +20,6 @@ export default function Posts({ posts }) {
     }
 
     const [delMsg, setDelMsg] = useState('')
-
     const delPost = async (e) => {
         e.preventDefault();
         const posts = await SupaBaseDB
@@ -28,19 +27,8 @@ export default function Posts({ posts }) {
             .delete()
             .eq("post_id", posted.post_id);
 
-        const imageFileName = posted.filename;
-
-        const bucket = await SupaBaseDB // bucket is the name for a "storage folder" in supabase
-            .storage
-            .from('post-pics')
-            .remove([`public/${imageFileName}`]);
-
-
         if (posts.error) {
             setDelMsg(JSON.stringify(posts.error['message']));
-        }
-        else if (bucket.error) {
-            setDelMsg(JSON.stringify(bucket.error['message']))
         }
         else {
             setDelMsg("posted deleted successfully");

@@ -16,7 +16,7 @@ export default function CreatePostForm({userId, profile}) {
     const [postText, setPostText] = useState('');
     const [caption, setCaption] = useState('');
     const [errMsg, setErrMsg] = useState('');
-    const [imageFileName, setFileName] = useState('');
+    const [imageFileName, setFileName] = useState('')
     const likes = 0; // set likes to 0 by default
     
     // to get specific data
@@ -45,7 +45,6 @@ export default function CreatePostForm({userId, profile}) {
         const res = await SupaBaseDB
             .storage.from("post-pics").upload("public/" + file?.name, file);
         
-        setFileName(file.name,file)
         setPostImg("https://brhqhwzkkolxuilfhwkx.supabase.co/storage/v1/object/public/post-pics/public/" + file.name, file)
         if (res.data) {
             console.log(res.data);
@@ -66,7 +65,6 @@ export default function CreatePostForm({userId, profile}) {
                 {
                     user_id: id,
                     post_pic: postImg,
-                    filename: imageFileName,
                     post_text: postText,
                     likes: likes,
                     caption: caption,

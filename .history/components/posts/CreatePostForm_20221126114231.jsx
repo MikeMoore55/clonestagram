@@ -66,7 +66,7 @@ export default function CreatePostForm({userId, profile}) {
                 {
                     user_id: id,
                     post_pic: postImg,
-                    filename: imageFileName,
+                    filename: imageFileName
                     post_text: postText,
                     likes: likes,
                     caption: caption,

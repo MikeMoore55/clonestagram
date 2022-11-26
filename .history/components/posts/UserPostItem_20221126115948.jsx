@@ -42,6 +42,8 @@ export default function UserPostItem({ posted }) {
                     {postContent == "image" ?
                         <div>
                             <img className={styles.postImg} src={posted.post_pic} />
+                            <div className={styles.postActions}>
+                            </div>
                         </div> :
                         <div>
                             <p className={styles.postText}>{posted.post_text}</p>
