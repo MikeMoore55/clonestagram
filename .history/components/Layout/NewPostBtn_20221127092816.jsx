@@ -9,7 +9,7 @@ export default function NewPostBtn() {
 
             <button className={styles.addBtn}>
                 <Link href={'/createpost'}>
-                    <img className={styles.icon} src={"https://brhqhwzkkolxuilfhwkx.supabase.co/storage/v1/object/public/app-icons/iconmonstr-plus-square-lined-240.png?t=2022-11-27T07%3A51%3A13.114Z"}/>
+                    <img className={styles.icon} src={"https://brhqhwzkkolxuilfhwkx.supabase.co/storage/v1/object/public/app-icons/iconmonstr-plus-square-multiple-lined-240.png?t=2022-11-27T07%3A28%3A09.220Z"}/>
                 </Link>
             </button>
             

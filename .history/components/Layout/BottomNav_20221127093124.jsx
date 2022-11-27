@@ -38,7 +38,7 @@ export default function BottomNav({userId}) {
                 
             <div className={styles.navLink}>
                 <Link href={'/logout'}>
-                    <img className={styles.icon} src={"https://brhqhwzkkolxuilfhwkx.supabase.co/storage/v1/object/public/app-icons/iconmonstr-log-out-2-240.png?t=2022-11-27T07%3A37%3A04.063Z"}/>
+                    <img className={styles.icon} src={"https://brhqhwzkkolxuilfhwkx.supabase.co/storage/v1/object/public/app-icons/iconmonstr-user-6-240.png?t=2022-11-27T07%3A27%3A44.970Z"}/>
                 </Link>
             </div>
                 

@@ -22,8 +22,8 @@
 
 .icon {
     position: relative;
-    width: 44%;
-    margin: 10% 23% 10% 23%;
+    width: 40%;
+    margin: 10% 30% 10% 30%;
     color: black;
 }
 
@@ -52,8 +52,9 @@
 
     .icon {
         position: relative;
-        width: 30%;
-        margin: 7% 35% 5% 35%;
+        font-size: 250%;
+        margin: 5% 20% 5% 20%;
+        color: black;
     }
 }
 
@@ -82,7 +83,11 @@
 
     .icon {
         position: relative;
-        width: 15%;
-        margin: 2% 42.5% 1% 42.5%;
+        font-size: 2em;
+        text-align: center;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        padding: 1% 1% 0% 1%;
+        color: black;
     }
 }

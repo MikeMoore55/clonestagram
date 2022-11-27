@@ -16,13 +16,12 @@
 .icon {
     position: relative;
     width: 70%;
-    margin: 1% 15% 1% 15%;
+    margin: 2% 15% 1% 15%;
+    background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
     animation-name: addIcon;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    animation-delay: none;
-    animation-direction: alternate-reverse;
 }
 
 @keyframes addIcon {
@@ -31,7 +30,7 @@
     }
 
     to {
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
 }
 
@@ -48,22 +47,16 @@
     .addBtn {
         position: relative;
         text-align: center;
+        border: none;
+        border-radius: 50%;
+        padding: 1% 1% 1% 1%;
+        font-size: 2em;
+        color: white;
+        font-weight: 800;
     }
 
     .addBtn:active {
         transform: scale((0.9));
-    }
-
-    .icon {
-        position: relative;
-        width: 40%;
-        margin: 1% 30% 1% 30%;
-        animation-name: addIcon;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        animation-delay: none;
-        animation-direction: alternate-reverse;
     }
 }
 
@@ -87,17 +80,5 @@
 
     .addBtn:active {
         transform: scale((0.9));
-    }
-
-    .icon {
-        position: relative;
-        width: 20%;
-        margin: 1% 40% 1% 40%;
-        animation-name: addIcon;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        animation-delay: none;
-        animation-direction: alternate-reverse;
     }
 }

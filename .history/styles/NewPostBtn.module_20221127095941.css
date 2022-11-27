@@ -88,16 +88,4 @@
     .addBtn:active {
         transform: scale((0.9));
     }
-
-    .icon {
-        position: relative;
-        width: 20%;
-        margin: 1% 40% 1% 40%;
-        animation-name: addIcon;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        animation-delay: none;
-        animation-direction: alternate-reverse;
-    }
 }
