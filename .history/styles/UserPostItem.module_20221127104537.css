@@ -92,7 +92,3 @@
 .cancelMsg:active {
     transform: scale(0.9);
 }
-
-@media (min-width: 490px) {}
-
-@media (min-width: 1000px) {}

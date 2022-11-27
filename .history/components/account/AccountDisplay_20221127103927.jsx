@@ -35,6 +35,9 @@ export default function AccountDisplay({ user }) {
                 Posts
             </h4>
 
+            <div className={styles.posts}>
+                {/* for all posts */}
+            </div>
         </div>
     );
 };

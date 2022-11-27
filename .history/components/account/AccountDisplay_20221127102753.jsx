@@ -16,25 +16,28 @@ export default function AccountDisplay({ user }) {
                     <p className={styles.dob}>{user.birth_date}</p>
                     <p className={styles.bio}>{user.bio}</p>
                 </div>
-            </div> 
+                
                 <div className={styles.accountOptions}>
-                    <button className={styles.editBtn}>
-                        <Link href={'/editaccount'}>
-                            Edit Account
-                        </Link>
-                    </button>
                     <button className={styles.delBtn}>
                         <Link href={'/delaccount'}>
                             Delete Account
                         </Link>
                     </button>
+                    <button className={styles.editBtn}>
+                        <Link href={'/editaccount'}>
+                            Edit Account
+                        </Link>
+                    </button>
                 </div>
-            
+            </div>
 
             <h4 className={styles.postHeading}>
                 Posts
             </h4>
 
+            <div className={styles.posts}>
+                {/* for all posts */}
+            </div>
         </div>
     );
 };

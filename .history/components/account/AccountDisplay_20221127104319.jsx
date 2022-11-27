@@ -35,6 +35,6 @@ export default function AccountDisplay({ user }) {
                 Posts
             </h4>
 
-        </div>
+                    </div>
     );
 };

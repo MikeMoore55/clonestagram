@@ -1,11 +1,11 @@
 .container {
     position: relative;
     width: 100%;
+    background-color: white;
 }
 
 .postedContent {
     position: relative;
-    background-color: white;
 }
 
 .postImg {
@@ -92,7 +92,3 @@
 .cancelMsg:active {
     transform: scale(0.9);
 }
-
-@media (min-width: 490px) {}
-
-@media (min-width: 1000px) {}

@@ -12,6 +12,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 30% 70%;
+    border-bottom: 1px solid black;
 }
 
 .img {
@@ -31,7 +32,6 @@
     text-align: left;
     margin: 2%;
     padding: 0%;
-    font-size: 1.1em;
 }
 
 .profilePic {
@@ -47,7 +47,6 @@
     text-align: left;
     margin: 2%;
     padding: 0%;
-    font-size: 1em;
 }
 
 .bio {
@@ -55,7 +54,6 @@
     text-align: left;
     margin: 2%;
     padding: 0%;
-    font-size: 1em;
 }
 
 .accountOptions {
@@ -68,28 +66,11 @@
 
 .delBtn {
     position: relative;
-    width: 90%;
-    margin: 2% 8% 0% 2%;
-    background-color: white;
-    color: red;
-    border: red 2px solid;
-    border-radius: 15px;
-    padding: 2%;
-    font-weight: 500;
-    font-size: 1em;
+    width: 60%;
+    margin: 2% 20% 2% 20%;
 }
 
-.editBtn {
-    position: relative;
-    width: 90%;
-    margin: 2% 2% 0% 8%;
-    background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
-    border: none;
-    border-radius: 15px;
-    padding: 2%;
-    font-weight: 500;
-    font-size: 1em;
-}
+.editBtn {}
 
 .postHeading {
     position: relative;
@@ -101,15 +82,16 @@
 
 @media (min-width: 490px) {
     .container {
-        padding: 11% 0% 0% 0%;
+        padding: 12% 0% 5% 0%;
         width: 100%;
     }
 
     .profile {
         margin: 1% 0% 0% 0%;
-        padding: 0%;
+        padding: 2%;
         width: 100%;
         grid-template-columns: 30% 70%;
+        border-bottom: 1px solid black;
     }
 
     .img {
@@ -141,56 +123,29 @@
         font-size: 1.4em;
     }
 
-    .bio {
+    .bioHeading {
         margin: 2%;
         padding: 0%;
         font-size: 1.4em;
     }
 
+    .bio {
+        margin: 0%;
+        padding: 0%;
+        font-size: 1.3em;
+    }
+
     .postHeading {
         margin: 0%;
-        padding-top: 2%;
+        padding: 2%;
         border-bottom: 1px solid black;
         font-size: 1.5em;
-    }
-
-    .accountOptions {
-        position: relative;
-        width: 80%;
-        margin: 2% 10% 2% 10%;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
-    .delBtn {
-        position: relative;
-        width: 80%;
-        margin: 2% 15% 0% 5%;
-        background-color: white;
-        color: red;
-        border: red 2px solid;
-        border-radius: 20px;
-        padding: 2%;
-        font-weight: 500;
-        font-size: 1.3em;
-    }
-
-    .editBtn {
-        position: relative;
-        width: 80%;
-        margin: 2% 5% 0% 15%;
-        background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
-        border: none;
-        border-radius: 20px;
-        padding: 2%;
-        font-weight: 500;
-        font-size: 1.3em;
     }
 }
 
 @media (min-width: 1000px) {
     .container {
-        padding: 2% 0% 0% 0%;
+        padding: 4% 0% 5% 0%;
         width: 100%;
     }
 
@@ -199,6 +154,7 @@
         padding: 0.6%;
         width: 100%;
         grid-template-columns: 20% 80%;
+        border-bottom: 1px solid black;
     }
 
     .img {
@@ -212,7 +168,7 @@
     }
 
     .username {
-        margin: 1% 2% 1% 2%;
+        margin: 1%;
         padding: 0%;
         font-size: 1.3em;
     }
@@ -225,14 +181,19 @@
     }
 
     .dob {
-        margin: 1% 2% 1% 2%;
+        margin: 2%;
         padding: 0%;
         font-size: 1em;
     }
 
+    .bioHeading {
+        margin: 2%;
+        padding: 0%;
+        font-size: 1em;
+    }
 
     .bio {
-        margin: 1% 2% 1% 2%;
+        margin: 0%;
         padding: 0%;
         font-size: 0.9em;
     }
@@ -242,38 +203,5 @@
         padding: 1%;
         border-bottom: 1px solid black;
         font-size: 1.3em;
-    }
-
-    .accountOptions {
-        position: relative;
-        width: 60%;
-        margin: 1% 20% 1% 20%;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
-    .delBtn {
-        position: relative;
-        width: 80%;
-        margin: 0% 15% 0% 5%;
-        background-color: white;
-        color: red;
-        border: red 2px solid;
-        border-radius: 20px;
-        padding: 1%;
-        font-weight: 500;
-        font-size: 0.9em;
-    }
-
-    .editBtn {
-        position: relative;
-        width: 80%;
-        margin: 0% 5% 0% 15%;
-        background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
-        border: none;
-        border-radius: 20px;
-        padding: 1%;
-        font-weight: 500;
-        font-size: 0.9em;
     }
 }

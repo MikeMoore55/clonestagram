@@ -20,14 +20,4 @@
     }
 }
 
-@media (min-width: 1000px) {
-    .list {
-        position: relative;
-        margin-top: 0%;
-        width: 100%;
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-        margin-bottom: 10%;
-        padding-bottom: 10%;
-    }
-}
+@media (min-width: 1000px) {}

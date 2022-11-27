@@ -18,14 +18,14 @@ export default function AccountDisplay({ user }) {
                 </div>
             </div> 
                 <div className={styles.accountOptions}>
-                    <button className={styles.editBtn}>
-                        <Link href={'/editaccount'}>
-                            Edit Account
-                        </Link>
-                    </button>
                     <button className={styles.delBtn}>
                         <Link href={'/delaccount'}>
                             Delete Account
+                        </Link>
+                    </button>
+                    <button className={styles.editBtn}>
+                        <Link href={'/editaccount'}>
+                            Edit Account
                         </Link>
                     </button>
                 </div>
@@ -35,6 +35,9 @@ export default function AccountDisplay({ user }) {
                 Posts
             </h4>
 
+            <div className={styles.posts}>
+                {/* for all posts */}
+            </div>
         </div>
     );
 };
