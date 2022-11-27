@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { SupaBaseDB } from '../../../utils/dbconnect';
-import Link from 'next/link';
+import Link
 import Router, { useRouter } from 'next/router';
 import BottomNav from '../../../components/Layout/BottomNav';
 import styles from '../../../styles/Post.module.css';
@@ -61,11 +61,9 @@ export default function Posts({ posts }) {
             <div className={styles.container}>
                 <div className={styles.postContent}>
                     {/* the post can either be a text format or just a plain image  */}
-                    <p className={styles.postId}>Id: {posted.post_id}</p>
                     {postContent == "image" ?
                         <div>
                             <img className={styles.postImg} src={posted.post_pic} />
-                            <p className={styles.caption}>{posted.caption}</p>
                         </div> :
                         <div>
                             <p className={styles.postText}>{posted.post_text}</p>
@@ -77,8 +75,8 @@ export default function Posts({ posts }) {
                         <button className={styles.editBtn}>Edit</button>
                     </div>
 
-                    <button className={styles.backBtn}>
-                        <Link href={`/account/${posted.user_id}`}>Back</Link>
+                    <button>
+                        <L
                     </button>
                 </div>
             </div>

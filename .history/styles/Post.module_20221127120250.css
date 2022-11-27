@@ -26,7 +26,6 @@
 }
 
 .postText {
-    text-align: center;
     position: relative;
     width: 100%;
     font-weight: 500;
@@ -253,7 +252,7 @@
 @media (min-width: 1000px) {
     .container {
         width: 100%;
-        padding-top: 3%;
+        padding-top: 2%;
     }
 
     .postContent {
@@ -276,8 +275,6 @@
 
     .postText {
         width: 100%;
-        text-align: center;
-        font-size: 1.2em;
         font-weight: 500;
         background-color: rgb(245, 245, 245);
         padding: 7%;

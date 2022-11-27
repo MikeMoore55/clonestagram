@@ -26,7 +26,6 @@
 }
 
 .postText {
-    text-align: center;
     position: relative;
     width: 100%;
     font-weight: 500;
@@ -152,8 +151,6 @@
 
     .postText {
         width: 100%;
-        text-align: center;
-        font-size: 1.7em;
         font-weight: 500;
         background-color: rgb(245, 245, 245);
         padding: 7%;
@@ -253,7 +250,7 @@
 @media (min-width: 1000px) {
     .container {
         width: 100%;
-        padding-top: 3%;
+        padding-top: 2%;
     }
 
     .postContent {
@@ -270,14 +267,12 @@
 
     .postImg {
         width: 100%;
-        height: 280px;
+        height: 270px;
         margin: 0%;
     }
 
     .postText {
         width: 100%;
-        text-align: center;
-        font-size: 1.2em;
         font-weight: 500;
         background-color: rgb(245, 245, 245);
         padding: 7%;
@@ -336,12 +331,8 @@
         border: solid #8300f1 2px;
         background-color: transparent;
         color: #8300f1;
-        padding: 0.8%;
+        padding: 0.5%;
         font-size: 0.9em;
-    }
-
-    .backBtn:active {
-        transform: scale(0.9);
     }
 
     .blank {

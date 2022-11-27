@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { SupaBaseDB } from '../../../utils/dbconnect';
-import Link from 'next/link';
 import Router, { useRouter } from 'next/router';
-import BottomNav from '../../../components/Layout/BottomNav';
 import styles from '../../../styles/Post.module.css';
 
 export default function Posts({ posts }) {
@@ -57,32 +55,24 @@ export default function Posts({ posts }) {
     } */
 
     return (
-        <div>
-            <div className={styles.container}>
-                <div className={styles.postContent}>
-                    {/* the post can either be a text format or just a plain image  */}
-                    <p className={styles.postId}>Id: {posted.post_id}</p>
-                    {postContent == "image" ?
-                        <div>
-                            <img className={styles.postImg} src={posted.post_pic} />
-                            <p className={styles.caption}>{posted.caption}</p>
-                        </div> :
-                        <div>
-                            <p className={styles.postText}>{posted.post_text}</p>
-                        </div>
-                    }
 
-                    <div className={styles.postActions}>
-                        <button className={styles.delBtn} onClick={(e) => { delPost(e) }}>Delete</button>
-                        <button className={styles.editBtn}>Edit</button>
+        <div className={styles.container}>
+            <div className={styles.postContent}>
+                {/* the post can either be a text format or just a plain image  */}
+                {postContent == "image" ?
+                    <div>
+                        <img className={styles.postImg} src={posted.post_pic} />
+                    </div> :
+                    <div>
+                        <p className={styles.postText}>{posted.post_text}</p>
                     </div>
+                }
 
-                    <button className={styles.backBtn}>
-                        <Link href={`/account/${posted.user_id}`}>Back</Link>
-                    </button>
+                <div className={styles.postActions}>
+                    <button className={styles.delBtn} onClick={(e) => { delPost(e) }}>Delete</button>
+                    <button className={styles.editBtn}>Edit</button>
                 </div>
             </div>
-            <BottomNav userId={posted.user_id} />
         </div>
 
     );

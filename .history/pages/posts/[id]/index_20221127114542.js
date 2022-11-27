@@ -65,7 +65,7 @@ export default function Posts({ posts }) {
                     {postContent == "image" ?
                         <div>
                             <img className={styles.postImg} src={posted.post_pic} />
-                            <p className={styles.caption}>{posted.caption}</p>
+                            <p>{posted.caption}</p>
                         </div> :
                         <div>
                             <p className={styles.postText}>{posted.post_text}</p>
