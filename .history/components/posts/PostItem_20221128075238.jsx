@@ -32,7 +32,7 @@ export default function PostItem({ posted }) {
         }
         else {
             console.log("post has been liked")
-            router.reload(); // reload page to update likes (-- find more efficient way to do so -- )
+            router.reload();
         }
     }
     
@@ -74,7 +74,7 @@ export default function PostItem({ posted }) {
             </div>
 
             <div className={styles.postInteraction}>
-                <span className={styles.likes} onClick={() => { addLike(posted.post_Id) }}>Likes  {posted.likes}</span>
+                <span className={styles.likes} onClick={() => { addLike(posted.post_Id) }}>Likes {posted.likes}</span>
                 <span className={styles.comments}>Comments</span>
             </div>
             

@@ -80,10 +80,16 @@
 
 .likes {
     position: relative;
+    width: 80%;
+    margin: 0% 10% 0% 10%;
     text-align: center;
-    width: 100%;
     font-weight: 500;
-    color: tomato;
+    font-size: 1.1em;
+    border: rgb(248, 79, 138) solid 3px;
+    background-color: rgb(243, 96, 145);
+    padding: 1%;
+    border-radius: 10px;
+    color: rgb(248, 79, 138);
 }
 
 .likes:active {
@@ -92,10 +98,7 @@
 
 .comments {
     position: relative;
-    text-align: center;
-    width: 100%;
-    font-weight: 500;
-    color: rgb(84, 135, 245);
+    text-align: end;
 }
 
 @media (min-width: 490px) {

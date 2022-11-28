@@ -1,12 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import Router,{useRouter} from 'next/router';
 import {SupaBaseDB} from '../../utils/dbconnect'
 import styles from '../../styles/PostItem.module.css';
 
 export default function PostItem({ posted }) { 
-
-    const router = useRouter();
 
     // to make image related posts look different to text related post
     let postContent;  // post type
@@ -17,23 +14,16 @@ export default function PostItem({ posted }) {
         postContent = "text"
     }
 
-    const addedLike = posted.likes +1;
-
-    const addLike = async () => {
+    const addLike = async (id) => {
         const likepost = await SupaBaseDB
             .from('posts')
-            .update({
-                likes: addedLike    
-            })
-            .eq('post_id', posted.post_id);
-        
-        if (likepost.error) {
-            console.log(JSON.stringify(likepost.error["message"]))
-        }
-        else {
-            console.log("post has been liked")
-            router.reload(); // reload page to update likes (-- find more efficient way to do so -- )
-        }
+        .update({
+        username: username,
+        bio: bio,
+        profile_pic: profileImg,
+        birth_date: dob
+      })
+      .eq('account_id', userId);
     }
     
     return (
@@ -74,7 +64,7 @@ export default function PostItem({ posted }) {
             </div>
 
             <div className={styles.postInteraction}>
-                <span className={styles.likes} onClick={() => { addLike(posted.post_Id) }}>Likes  {posted.likes}</span>
+                <span className={styles.likes}>Likes</span>
                 <span className={styles.comments}>Comments</span>
             </div>
             

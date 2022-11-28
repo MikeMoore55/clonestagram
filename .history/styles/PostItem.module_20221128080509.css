@@ -83,7 +83,7 @@
     text-align: center;
     width: 100%;
     font-weight: 500;
-    color: tomato;
+    color: palevioletred;
 }
 
 .likes:active {
@@ -92,10 +92,7 @@
 
 .comments {
     position: relative;
-    text-align: center;
-    width: 100%;
-    font-weight: 500;
-    color: rgb(84, 135, 245);
+    text-align: end;
 }
 
 @media (min-width: 490px) {

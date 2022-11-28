@@ -6,8 +6,6 @@ import styles from '../../styles/PostItem.module.css';
 
 export default function PostItem({ posted }) { 
 
-    const router = useRouter();
-
     // to make image related posts look different to text related post
     let postContent;  // post type
     if (posted.post_text == '') {
@@ -32,7 +30,6 @@ export default function PostItem({ posted }) {
         }
         else {
             console.log("post has been liked")
-            router.reload(); // reload page to update likes (-- find more efficient way to do so -- )
         }
     }
     
@@ -74,7 +71,7 @@ export default function PostItem({ posted }) {
             </div>
 
             <div className={styles.postInteraction}>
-                <span className={styles.likes} onClick={() => { addLike(posted.post_Id) }}>Likes  {posted.likes}</span>
+                <span className={styles.likes} onClick={() => { addLike(posted.post_Id) }}>Likes {posted.likes}</span>
                 <span className={styles.comments}>Comments</span>
             </div>
             
