@@ -16,12 +16,11 @@ export default function PostItem({ posted }) {
     return (
         <div className={styles.container}>
 
-            <Link href={`/user/${posted.user_id}`}>
             <div className={styles.profileSection}>
-                    <img className={styles.profilePic} src={posted.user_profilepic}/>
-                    <h3 className={styles.username}>{posted.user_username}</h3>
+                <Link href={`/user/${posted.user_id}`}
+                <img className={styles.profilePic} src={posted.user_profilepic}/>
+                <h3 className={styles.username}>{posted.user_username}</h3>
             </div>
-            </Link>
 
             <div className={styles.postContent}>
                 {/* the post can either be a text format or just a plain image  */}
