@@ -18,19 +18,7 @@ export default function UserDisplay({user}) {
                     <p className={styles.bio}>{user.bio}</p>
                 </div>
             </div>
-
-            <div className={styles.accountOptions}>
-                    <button className={styles.editBtn}>
-                        <Link href={'/message'}>
-                            Message
-                        </Link>
-                    </button>
-                    <button className={styles.cancelBtn}>
-                        <Link href={'/home'}>
-                            Back
-                        </Link>
-                    </button>
-                </div>
+            
 
             <h4 className={styles.postHeading}>
                 Posts

@@ -1,0 +1,81 @@
+.container {
+    position: relative;
+    margin: 50% 10% 10% 10%;
+    width: 80%;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10%;
+}
+
+.heading {
+    position: relative;
+    text-align: center;
+}
+
+.btn {
+    position: relative;
+    width: 50%;
+    margin: 5% 25% 2% 25%;
+    background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
+    border-radius: 10px;
+    border: none;
+    padding: 1%;
+    font-size: 1.1em;
+}
+
+.backgroundFeature {
+    position: fixed;
+    color: transparent;
+    background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    right: 0%;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+@media (min-width: 490px) {
+    .container {
+        margin: 40% 20% 10% 20%;
+        width: 60%;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 7%;
+    }
+
+    .heading {
+        font-size: 1.7em;
+    }
+
+    .btn {
+        position: relative;
+        width: 50%;
+        margin: 5% 25% 2% 25%;
+        background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
+        border-radius: 10px;
+        border: none;
+        padding: 1%;
+        font-size: 1.1em;
+    }
+
+    .backgroundFeature {
+        position: fixed;
+        color: transparent;
+        background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
+        width: 100%;
+        height: 100%;
+        bottom: 0%;
+        right: 0%;
+        top: 0%;
+        left: 0%;
+        z-index: -1;
+        opacity: 0.9;
+    }
+}
+
+@media (min-width: 1000px) {}

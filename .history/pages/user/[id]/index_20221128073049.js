@@ -24,14 +24,12 @@ export default function Account({ account, posts }) {
 
 export const getStaticProps = async (context) => {
 
-    // get user account
     const accounts = await SupaBaseDB
         .from("account")
         .select('*')
         .eq('account_id', context.params.id)
     const account = accounts.data;
 
-    // get user posts
     const posts = await SupaBaseDB
         .from("posts")
         .select('*')

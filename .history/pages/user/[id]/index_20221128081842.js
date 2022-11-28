@@ -31,7 +31,6 @@ export const getStaticProps = async (context) => {
         .eq('account_id', context.params.id)
     const account = accounts.data;
 
-    // get user posts
     const posts = await SupaBaseDB
         .from("posts")
         .select('*')

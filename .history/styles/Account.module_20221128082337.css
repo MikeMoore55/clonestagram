@@ -79,10 +79,6 @@
     font-size: 1em;
 }
 
-.delBtn:active {
-    transform: scale(0.9);
-}
-
 .cancelBtn {
     position: relative;
     width: 90%;
@@ -96,10 +92,6 @@
     font-size: 1em;
 }
 
-.cancelBtn:active {
-    transform: scale(0.9);
-}
-
 .editBtn {
     position: relative;
     width: 90%;
@@ -110,10 +102,6 @@
     padding: 2%;
     font-weight: 500;
     font-size: 1em;
-}
-
-.editBtn:active {
-    transform: scale(0.9);
 }
 
 .postHeading {

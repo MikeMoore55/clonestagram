@@ -25,7 +25,7 @@ export default function UserDisplay({user}) {
                             Message
                         </Link>
                     </button>
-                    <button className={styles.cancelBtn}>
+                    <button className={styles.delBtn}>
                         <Link href={'/home'}>
                             Back
                         </Link>

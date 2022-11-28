@@ -79,10 +79,6 @@
     font-size: 1em;
 }
 
-.delBtn:active {
-    transform: scale(0.9);
-}
-
 .cancelBtn {
     position: relative;
     width: 90%;
@@ -96,10 +92,6 @@
     font-size: 1em;
 }
 
-.cancelBtn:active {
-    transform: scale(0.9);
-}
-
 .editBtn {
     position: relative;
     width: 90%;
@@ -110,10 +102,6 @@
     padding: 2%;
     font-weight: 500;
     font-size: 1em;
-}
-
-.editBtn:active {
-    transform: scale(0.9);
 }
 
 .postHeading {
@@ -295,17 +283,6 @@
         background-color: white;
         color: red;
         border: red 2px solid;
-        border-radius: 20px;
-        padding: 1%;
-        font-weight: 500;
-        font-size: 0.9em;
-    }
-
-    .cancelBtn {
-        position: relative;
-        width: 80%;
-        margin: 0% 15% 0% 5%;
-        background-color: white;
         border-radius: 20px;
         padding: 1%;
         font-weight: 500;
