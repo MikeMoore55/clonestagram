@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { SupaBaseDB } from '../../../utils/dbconnect';
 import Link from 'next/link';
 import Router, { useRouter } from 'next/router';
-import Head from 'next/head';
 import BottomNav from '../../../components/Layout/BottomNav';
 import styles from '../../../styles/Post.module.css';
 
@@ -59,9 +58,6 @@ export default function Posts({ posts }) {
 
     return (
         <div>
-            <Head>
-                <title>Post | Clonestagram</title>
-            </Head>
             <div className={styles.container}>
                 <div className={styles.postContent}>
                     {/* the post can either be a text format or just a plain image  */}

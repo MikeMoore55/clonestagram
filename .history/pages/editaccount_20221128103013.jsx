@@ -4,6 +4,7 @@ import { parseCookies } from '../helpers/cookie';
 import EditAccountForm from '../components/account/EditAccount';
 import Head from 'next/head';
 
+
 export default function EditAccount({ data, accounts }) {
 
   // user id from cookie
@@ -42,9 +43,7 @@ export default function EditAccount({ data, accounts }) {
 
   return (
     <div>
-        <Head>
-          <title>Edit Account | Clonestagram</title>
-         </Head>
+
       <EditAccountForm account={profiles} />
     
     </div>

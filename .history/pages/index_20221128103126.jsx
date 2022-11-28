@@ -2,14 +2,15 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Index.module.css';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Index() {
   return (
 
     <div className={styles.container}>
         <Head>
-          <title>Welcome to Clonestagram</title>
-        </Head>
+                <title>Account</title>
+          </Head>
       <div className={styles.greetingContainer}>
         <p>Welcome to</p>
         <h3>Clonestagram</h3>

@@ -43,7 +43,7 @@ export default function EditAccount({ data, accounts }) {
   return (
     <div>
         <Head>
-          <title>Edit Account | Clonestagram</title>
+          <title>Edit Account</title>
          </Head>
       <EditAccountForm account={profiles} />
     

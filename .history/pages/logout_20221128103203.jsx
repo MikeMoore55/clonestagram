@@ -27,9 +27,6 @@ export default function Logout() {
 
     return (
         <div className={styles.container}>
-              <Head>
-                <title>Logout | Clonestagram</title>
-            </Head>
             <div className={styles.block}>
                 <h3 className={styles.heading1}>We hope to see you again soon</h3>
                 <p className={styles.text}>Are you sure you want to Logout?</p>

@@ -8,8 +8,8 @@ export default function Index() {
 
     <div className={styles.container}>
         <Head>
-          <title>Welcome to Clonestagram</title>
-        </Head>
+                <title>Account</title>
+          </Head>
       <div className={styles.greetingContainer}>
         <p>Welcome to</p>
         <h3>Clonestagram</h3>

@@ -20,7 +20,7 @@ export default function Home({ data, posts }) {
 
         <div>
             <Head>
-                <title>Home | Clonestagram</title>
+                <title>Clonestagram</title>
             </Head>
             <div>
                 <DisplayPosts post={posts} />

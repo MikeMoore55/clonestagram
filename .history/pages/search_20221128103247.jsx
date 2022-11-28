@@ -1,15 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+
 import Footer from '../components/Layout/Footer';
 import styles from '../styles/CommingSoon.module.css';
 
-export default function message() {
+export default function search() {
     return (
         <div>
-            <Head>
-                <title>Coming Soon</title>
-            </Head>
             <div className={styles.container}>
                 <h2 className={styles.heading}>This feature will be coming soon 🥳!</h2>
                 <button className={styles.btn}>

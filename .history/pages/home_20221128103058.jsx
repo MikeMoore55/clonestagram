@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import { parseCookies } from '../helpers/cookie';
 import { SupaBaseDB } from '../utils/dbconnect';
-import Head from 'next/head';
 import BottomNav from '../components/Layout/BottomNav';
 import DisplayPosts from '../components/posts/DisplayPosts';
 
@@ -20,7 +19,7 @@ export default function Home({ data, posts }) {
 
         <div>
             <Head>
-                <title>Home | Clonestagram</title>
+                <title>Clonestagram</title>
             </Head>
             <div>
                 <DisplayPosts post={posts} />

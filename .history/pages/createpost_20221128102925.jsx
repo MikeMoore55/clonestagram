@@ -34,7 +34,7 @@ export default function CreatePost({data, account}) {
 
     <div> 
         <Head>
-          <title>New Post | Clonestagram</title>
+            <title>Account</title>
         </Head>
       <CreatePostForm userId={userId} profile={profiles} />
     </div>

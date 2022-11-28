@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Head from 'next/head';
 import Footer from '../components/Layout/Footer';
 import styles from '../styles/CommingSoon.module.css';
 

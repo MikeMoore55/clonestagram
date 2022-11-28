@@ -1,6 +1,5 @@
 import React from 'react';
 import { SupaBaseDB } from '../../../utils/dbconnect';
-import Head from 'next/head';
 import UserDisplay from '../../../components/users/UserDisplay';
 import BottomNav from '../../../components/Layout/BottomNav';
 import UsersPostsList from '../../../components/users/UsersPostList';
@@ -10,9 +9,6 @@ export default function Account({ account, posts }) {
 
     return (
         <div>
-            <Head>
-                <title>User | Clonestagram</title>
-            </Head>
             {
                 account.map(user =>
                     <div key={user.account_id}>

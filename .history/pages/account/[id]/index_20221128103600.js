@@ -1,9 +1,9 @@
 import React from 'react';
 import { SupaBaseDB } from '../../../utils/dbconnect';
-import Head from 'next/head';
-import UserDisplay from '../../../components/users/UserDisplay';
+import AccountDisplay from '../../../components/account/AccountDisplay';
 import BottomNav from '../../../components/Layout/BottomNav';
-import UsersPostsList from '../../../components/users/UsersPostList';
+import Head from 'next/head';
+import UserPostsList from '../../../components/posts/UserPostsList';
 
 export default function Account({ account, posts }) {
 
@@ -11,13 +11,13 @@ export default function Account({ account, posts }) {
     return (
         <div>
             <Head>
-                <title>User | Clonestagram</title>
+                <title>Account v</title>
             </Head>
             {
                 account.map(user =>
                     <div key={user.account_id}>
-                        <UserDisplay user={user} />
-                        <UsersPostsList posts={posts} />
+                        <AccountDisplay user={user} />
+                        <UserPostsList posts={posts} />
                         <BottomNav userId={user.account_id} />
                     </div>
                 )
@@ -28,14 +28,12 @@ export default function Account({ account, posts }) {
 
 export const getStaticProps = async (context) => {
 
-    // get user account
     const accounts = await SupaBaseDB
         .from("account")
         .select('*')
         .eq('account_id', context.params.id)
     const account = accounts.data;
 
-    // get user posts
     const posts = await SupaBaseDB
         .from("posts")
         .select('*')

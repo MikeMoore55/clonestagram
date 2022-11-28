@@ -10,9 +10,6 @@ export default function Account({ account, posts }) {
 
     return (
         <div>
-            <Head>
-                <title>User | Clonestagram</title>
-            </Head>
             {
                 account.map(user =>
                     <div key={user.account_id}>

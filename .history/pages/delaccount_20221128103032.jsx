@@ -52,7 +52,7 @@ export default function DelAccount( { data } ) {
     return (
         <div className={styles.container}>
             <Head>
-                <title>Delete Account | Clonestagram</title>
+                <title>Delete Account</title>
             </Head>
             <div className={styles.block}>
                 <h3 className={styles.heading1}>You Are Leaving Us So Soon😢...</h3>

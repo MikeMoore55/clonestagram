@@ -60,7 +60,7 @@ export default function Posts({ posts }) {
     return (
         <div>
             <Head>
-                <title>Post | Clonestagram</title>
+                <title>Post</title>
             </Head>
             <div className={styles.container}>
                 <div className={styles.postContent}>

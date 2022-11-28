@@ -59,9 +59,6 @@ export default function Posts({ posts }) {
 
     return (
         <div>
-            <Head>
-                <title>Post | Clonestagram</title>
-            </Head>
             <div className={styles.container}>
                 <div className={styles.postContent}>
                     {/* the post can either be a text format or just a plain image  */}

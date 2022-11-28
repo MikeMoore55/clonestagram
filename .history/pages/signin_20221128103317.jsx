@@ -1,7 +1,6 @@
 import React from 'react';
 import { SupaBaseDB } from '../utils/dbconnect';
 import SignInForm from '../components/Auth/SignInForm';
-import Head from 'next/head';
 
 export default function signin({ accounts }) {
   
@@ -9,8 +8,8 @@ export default function signin({ accounts }) {
 
     <div>
         <Head>
-          <title>SignIn | Clonestagram</title>
-        </Head>
+                <title>Account</title>
+            </Head>
       <SignInForm accounts={accounts} />
     </div>
   

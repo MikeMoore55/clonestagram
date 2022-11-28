@@ -32,10 +32,7 @@ export default function CreatePost({data, account}) {
 
   return (
 
-    <div> 
-        <Head>
-          <title>New Post | Clonestagram</title>
-        </Head>
+    <div>    
       <CreatePostForm userId={userId} profile={profiles} />
     </div>
 

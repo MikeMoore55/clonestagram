@@ -4,6 +4,7 @@ import Router,{useRouter} from 'next/router';
 import { SupaBaseDB } from '../utils/dbconnect';
 import { parseCookies } from '../helpers/cookie';
 import Head from 'next/head';
+
 import styles from '../styles/DelAccount.module.css';
 import Footer from '../components/Layout/Footer'
 
@@ -52,7 +53,7 @@ export default function DelAccount( { data } ) {
     return (
         <div className={styles.container}>
             <Head>
-                <title>Delete Account | Clonestagram</title>
+                <title>Delete Account</title>
             </Head>
             <div className={styles.block}>
                 <h3 className={styles.heading1}>You Are Leaving Us So Soon😢...</h3>
