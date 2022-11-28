@@ -58,7 +58,7 @@
     margin: 2% 10% 2% 0%;
     padding: 1%;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
 }
 
@@ -72,10 +72,9 @@
     height: 100%;
     margin: 2% 0% 2% 10%;
     padding: 1%;
-    border: solid #8300f1 2px;
-    background-color: transparent;
-    color: #8300f1;
-    border-radius: 20px;
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
 }
 
 .cancelBtn:active {
@@ -92,6 +91,40 @@
     color: #8300f1;
     padding: 1%;
 }
+
+.blank {
+    position: fixed;
+    display: none;
+}
+
+.msgContainer {
+    position: fixed;
+    top: 40%;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    background-image: linear-gradient(to right bottom, #fe4c4c, #fe5151, #fe5656, #fe5a5a, #fe5f5f);
+    border: red solid 5px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+}
+
+.cancelMsg {
+    position: relative;
+    width: 20%;
+    margin: 2% 40% 5% 40%;
+    background-color: transparent;
+    border: rgb(58, 58, 58) solid 2px;
+    border-radius: 10px;
+    color: rgb(58, 58, 58);
+    padding: 1%;
+}
+
+.cancelMsg:active {
+    transform: scale(0.9);
+}
+
 
 @media (min-width: 490px) {
     .container {
@@ -147,7 +180,7 @@
         margin: 2% 10% 2% 0%;
         padding: 1%;
         border: none;
-        border-radius: 27px;
+        border-radius: 20px;
         background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
         font-size: 1.3em;
     }
@@ -164,7 +197,7 @@
         border: solid #8300f1 2px;
         background-color: transparent;
         color: #8300f1;
-        border-radius: 27px;
+        border-radius: 20px;
         font-size: 1.3em;
     }
 
@@ -183,7 +216,40 @@
         font-size: 1.3em;
     }
 
+    .blank {
+        position: fixed;
+        display: none;
+    }
+
+    .msgContainer {
+        position: fixed;
+        top: 40%;
+        left: 10%;
+        right: 10%;
+        width: 80%;
+        background-image: linear-gradient(to right bottom, #fe4c4c, #fe5151, #fe5656, #fe5a5a, #fe5f5f);
+        border: red solid 5px;
+        border-radius: 10px;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .cancelMsg {
+        position: relative;
+        width: 20%;
+        margin: 2% 40% 5% 40%;
+        background-color: transparent;
+        border: rgb(58, 58, 58) solid 2px;
+        border-radius: 10px;
+        color: rgb(58, 58, 58);
+        padding: 1%;
+    }
+
+    .cancelMsg:active {
+        transform: scale(0.9);
+    }
 }
+
 
 @media (min-width: 1000px) {
     .container {
@@ -228,19 +294,19 @@
     }
 
     .postActions {
-        margin: 0.9% 0% 0% 0%;
+        margin: 0.5% 0% 0% 0%;
         padding: 0%;
         display: grid;
         grid-template-columns: 50% 50%;
     }
 
     .delBtn {
-        width: 60%;
+        width: 55%;
         height: 100%;
-        margin: 1% 20% 1% 20%;
+        margin: 1% 30% 1% 25%;
         padding: 0.5%;
         border: none;
-        border-radius: 35px;
+        border-radius: 20px;
         background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
         font-size: 0.9em;
     }
@@ -250,18 +316,65 @@
     }
 
     .cancelBtn {
-        width: 60%;
+        width: 55%;
         height: 100%;
-        margin: 2% 20% 2% 20%;
+        margin: 2% 25% 2% 30%;
         padding: 0.5%;
-        border: solid #8300f1 2px;
-        background-color: transparent;
-        color: #8300f1;
-        border-radius: 35px;
+        border: none;
+        border-radius: 20px;
+        background-image: linear-gradient(to right bottom, #000bf8, #5e00f5, #8300f1, #a002ee, #b812eb);
         font-size: 0.9em;
     }
 
     .cancelBtn:active {
+        transform: scale(0.9);
+    }
+
+    .backBtn {
+        width: 30%;
+        margin: 3% 35% 1% 35%;
+        border-radius: 20px;
+        border: solid #8300f1 2px;
+        background-color: transparent;
+        color: #8300f1;
+        padding: 0.8%;
+        font-size: 0.9em;
+    }
+
+    .backBtn:active {
+        transform: scale(0.9);
+    }
+
+    .blank {
+        position: fixed;
+        display: none;
+    }
+
+    .msgContainer {
+        position: fixed;
+        top: 40%;
+        left: 10%;
+        right: 10%;
+        width: 80%;
+        background-image: linear-gradient(to right bottom, #fe4c4c, #fe5151, #fe5656, #fe5a5a, #fe5f5f);
+        border: red solid 5px;
+        border-radius: 10px;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .cancelMsg {
+        position: relative;
+        width: 20%;
+        margin: 2% 40% 5% 40%;
+        background-color: transparent;
+        border: rgb(58, 58, 58) solid 2px;
+        border-radius: 10px;
+        color: rgb(58, 58, 58);
+        padding: 1%;
+    }
+
+    .cancelMsg:active {
         transform: scale(0.9);
     }
 }

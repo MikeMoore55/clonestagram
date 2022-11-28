@@ -93,6 +93,40 @@
     padding: 1%;
 }
 
+.blank {
+    position: fixed;
+    display: none;
+}
+
+.msgContainer {
+    position: fixed;
+    top: 40%;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    background-image: linear-gradient(to right bottom, #fe4c4c, #fe5151, #fe5656, #fe5a5a, #fe5f5f);
+    border: red solid 5px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+}
+
+.cancelMsg {
+    position: relative;
+    width: 20%;
+    margin: 2% 40% 5% 40%;
+    background-color: transparent;
+    border: rgb(58, 58, 58) solid 2px;
+    border-radius: 10px;
+    color: rgb(58, 58, 58);
+    padding: 1%;
+}
+
+.cancelMsg:active {
+    transform: scale(0.9);
+}
+
+
 @media (min-width: 490px) {
     .container {
         width: 100%;
@@ -184,6 +218,7 @@
     }
 
 }
+
 
 @media (min-width: 1000px) {
     .container {

@@ -74,7 +74,7 @@ export default function Posts({ posts }) {
 
                     <div className={styles.postActions}>
                         <button className={styles.delBtn} onClick={(e) => { delPost(e) }}>Delete</button>
-                        <button className={styles.cancelBtn}>
+                        <button className={styles.backBtn}>
                             <Link href={`/account/${posted.user_id}`}>Back</Link>
                         </button>
                     </div>

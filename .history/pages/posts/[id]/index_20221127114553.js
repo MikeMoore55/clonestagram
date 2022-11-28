@@ -74,11 +74,12 @@ export default function Posts({ posts }) {
 
                     <div className={styles.postActions}>
                         <button className={styles.delBtn} onClick={(e) => { delPost(e) }}>Delete</button>
-                        <button className={styles.cancelBtn}>
-                            <Link href={`/account/${posted.user_id}`}>Back</Link>
-                        </button>
+                        <button className={styles.editBtn}>Edit</button>
                     </div>
 
+                    <button className={styles.backBtn}>
+                        <Link href={`/account/${posted.user_id}`}>Back</Link>
+                    </button>
                 </div>
             </div>
             <BottomNav userId={posted.user_id} />
